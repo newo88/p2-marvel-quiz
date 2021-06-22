@@ -1,3 +1,32 @@
 body{
-    background-color: aqua;
+    background-color: grey;
+}
+
+/*div:hover{
+    background-color: red;
+    cursor: pointer;
+    
+}
+
+div{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    background-color: green;
+}*/
+
+#questions{
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+}
+
+.user-choice{
+    width: 100px;
+    height: 50px;
+    border: 2px solid black;
+    margin: 20px;
+    display: inline-block;
+    cursor: pointer;
 }
