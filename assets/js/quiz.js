@@ -1,33 +1,60 @@
-const choiceA = document.getElementById("choiceA")
-const choiceB = document.getElementById("choiceB")
-const choiceC = document.getElementById("choiceC")
-const choiceD = document.getElementById("choiceD")
-const questionElement = document.getElementById("questions");
-let answersElements = document.getElementsByClassName("user-choice");
-let randomIndex = Math.floor(Math.random() * ironmanQuestions.length);
+const questions = document.getElementById('questions')
+const choices = document.getElementsByClassName('choice-text');
 
-//document.getElementById("choiceA").addEventListener("click");
+let currentQuestion = {};
+// creates delow before answer input
+//let acceptingAnswer = true;
+let score = 0;
+let questionCounter = 0;
+let availableQuestions = [];
+
+//CONSTANTS
+const CORRECT_BONUS = 10;
+const MAX_QUESTIONS = 3;
 
 
 
+startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuesions = [...questions];
+    console.log(questions)
+    getNewQuestion();
+};
+
+getNewQuestion = () => {
+
+    //if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS){
+      //  return window.location.assign() 
+     // alert('you answered all the questions')
+   // }
+    questionCounter++;
+    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+    currentQuestion = availableQuesions[questionIndex];
+    question.innerText = currentQuestion.question;
+
+    choices.forEach( choice => {
+        const number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
+
+    })
+
+    availableQuestions.splice(questionIndex, 1);
+
+    acceptingAnswer = true;
+};
+
+choices.forEach(choice =>{
+    choice.addEventListener( "click", e => {
+
+       // acceptingAnswer = false;
+      const selectedChoice = e.target;
+      const selectedAnswer = selectedChoice.dataset["number"];
+      console.log(selectedAnswer == currentQuestion.answer);
+      getNewQuestion()
+    })
+});
 
 
 
-function renderQuestion(){
-   
-questionElement.innerHTML = ironmanQuestions[randomIndex].question;
-for (let i = 0; i < answersElements.length; i++) {
-    console.log(121) 
-//answerElements = answersElements[0].innerHTML;
- 
-  choiceA.innerHTML = choiceA;
-  choiceB.innerHTML = choiceB;
-  choiceC.innerHTML = choiceC;
-  choiceD.innerHTML = choiceD;
-  console.log(choiceA)
-  
-}
-}
-
-renderQuestion()
-
+startGame()
