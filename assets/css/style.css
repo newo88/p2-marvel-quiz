@@ -2,19 +2,13 @@ body{
     background-color: grey;
 }
 
-/*div:hover{
-    background-color: red;
-    cursor: pointer;
-    
+.correct{
+    background-color: green;
 }
 
-div{
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    justify-content: center;
-    background-color: green;
-}*/
+.incorrect{
+    background-color: red;
+}
 
 #questions{
     border: 2px solid black;

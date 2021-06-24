@@ -1,37 +1,34 @@
 const questions = document.getElementById('questions')
-const choices = document.getElementsByClassName('choice-text');
+//Array.from() method returns an Array object from any object with a length property or an iterable object.
+const choices = Array.from(document.getElementsByClassName('choice-text')); 
+
 
 let currentQuestion = {};
-// creates delow before answer input
-//let acceptingAnswer = true;
+let acceptingAnswer = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
 //CONSTANTS
-const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const CORRECT_BONUS = 1;
+let MAX_QUESTIONS = 8;
 
 
 
 startGame = () => {
     questionCounter = 0;
     score = 0;
-    availableQuesions = [...questions];
-    console.log(questions)
+    availableQuesions = [...ironmanQuiz];
     getNewQuestion();
 };
 
 getNewQuestion = () => {
 
-    //if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS){
-      //  return window.location.assign() 
-     // alert('you answered all the questions')
-   // }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
     question.innerText = currentQuestion.question;
+    MAX_QUESTIONS = 5;
 
     choices.forEach( choice => {
         const number = choice.dataset['number'];
@@ -46,14 +43,21 @@ getNewQuestion = () => {
 
 choices.forEach(choice =>{
     choice.addEventListener( "click", e => {
-
-       // acceptingAnswer = false;
-      const selectedChoice = e.target;
-      const selectedAnswer = selectedChoice.dataset["number"];
+    const  selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset["number"];
       console.log(selectedAnswer == currentQuestion.answer);
+
+      if (selectedAnswer == currentQuestion.answer){
+        console.log("correct");
+    }else if (selectedAnswer !== currentQuestion.answer)
+    console.log("incorrect");
+
+  
       getNewQuestion()
     })
+    
 });
+
 
 
 
