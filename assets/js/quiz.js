@@ -15,16 +15,16 @@ let MAX_QUESTIONS = 8;
 
 
 
-startGame = () => {
+function startGame() {
     questionCounter = 0;
     score = 0;
     availableQuesions = [...ironmanQuiz];
     getNewQuestion();
 };
 
-getNewQuestion = () => {
+function getNewQuestion() {
 
-    questionCounter++;
+   // questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
     question.innerText = currentQuestion.question;
@@ -36,11 +36,13 @@ getNewQuestion = () => {
 
     })
 
-    availableQuestions.splice(questionIndex, 1);
+    //availableQuestions.splice(questionIndex, 1);
 
-    acceptingAnswer = true;
+    //acceptingAnswer = true;
 };
 
+
+function checkAnswer(){
 choices.forEach(choice =>{
     choice.addEventListener( "click", e => {
     const  selectedChoice = e.target;
@@ -48,17 +50,21 @@ choices.forEach(choice =>{
       console.log(selectedAnswer == currentQuestion.answer);
 
       if (selectedAnswer == currentQuestion.answer){
-        console.log("correct");
+        document.getElementsByClassName("choice-text").classList.add("correct"); 
+        score = score + 1 .innerHTML;
     }else if (selectedAnswer !== currentQuestion.answer)
     console.log("incorrect");
 
-  
-      getNewQuestion()
+checkAnswer()
+    getNewQuestion()
+   
     })
     
 });
 
-
+}
 
 
 startGame()
+
+checkAnswer()

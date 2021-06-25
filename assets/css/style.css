@@ -24,3 +24,7 @@ body{
     display: inline-block;
     cursor: pointer;
 }
+
+.choice-text{
+    cursor: pointer;
+}
