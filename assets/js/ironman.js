@@ -84,7 +84,7 @@
                 choice2: "Batman",
                 choice3: "Captain America",
                 choice4: "Hulk",
-                answer: 2,
+                answer: 3,
             },
 
 
