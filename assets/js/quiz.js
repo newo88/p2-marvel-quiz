@@ -1,14 +1,31 @@
 const questions = document.getElementById('questions');
 //Array.from() method returns an Array object from any object with a length property or an iterable object.
 const choices = Array.from(document.getElementsByClassName('choice-text')); 
-const correctIncorrect = document.getElementById("correct-incorrect");
+//const correctIncorrect = document.getElementById("correct-incorrect");
 let currentQuestion = {};
 let acceptingAnswer = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-let delay = 1000;
 let MAX_QUESTIONS = 5;
+
+
+document.addEventListener("DOMContentLoaded", function(){
+    let buttons = document.getElementsByTagName("button");
+
+    for(let button of buttons){
+        button.addEventListener("click", function(){
+            if(this.getAttribute("data-type") === "ironman"){
+                return window.location.assign("quiz.html");
+                startGame();
+            }else {
+                let gameType = this.getAttribute("data-type")
+                alert(`Unknow game ${gameType}`)
+            }
+        })
+    }
+})
+
 
 
 
@@ -18,6 +35,8 @@ function startGame() {
     availableQuesions = [...ironmanQuiz];
     getNewQuestion();
 }
+
+
 
 function getNewQuestion() {
 if(availableQuestions.length === 5 || questionCounter >= MAX_QUESTIONS){
@@ -48,17 +67,12 @@ choices.forEach(choice =>{
 
      const classToApply = 
      selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-     
      selectedChoice.parentElement.classList.add(classToApply);
      setTimeout(() => {
         selectedChoice.parentElement.classList.remove(classToApply);
         getNewQuestion();
        
      }, 1000);
-   
-     console.log(classToApply);
-
-
    
     });
     
