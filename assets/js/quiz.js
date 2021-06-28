@@ -21,7 +21,7 @@ function startGame() {
 
 function getNewQuestion() {
 if(availableQuestions.length === 5 || questionCounter >= MAX_QUESTIONS){
-    return window.location.assign("index.html")
+    return window.location.assign("end.html")
 }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
@@ -52,10 +52,10 @@ choices.forEach(choice =>{
      selectedChoice.parentElement.classList.add(classToApply);
      setTimeout(() => {
         selectedChoice.parentElement.classList.remove(classToApply);
-      
+        getNewQuestion()
+       
      }, 1000);
-     
-     getNewQuestion()
+   
      console.log(classToApply);
 
 
