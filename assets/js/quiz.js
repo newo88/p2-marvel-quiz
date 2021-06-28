@@ -1,7 +1,7 @@
-const questions = document.getElementById('questions')
+const questions = document.getElementById('questions');
 //Array.from() method returns an Array object from any object with a length property or an iterable object.
 const choices = Array.from(document.getElementsByClassName('choice-text')); 
-const correctIncorrect = document.getElementById("correct-incorrect")
+const correctIncorrect = document.getElementById("correct-incorrect");
 let currentQuestion = {};
 let acceptingAnswer = true;
 let score = 0;
@@ -17,11 +17,11 @@ function startGame() {
     score = 0;
     availableQuesions = [...ironmanQuiz];
     getNewQuestion();
-};
+}
 
 function getNewQuestion() {
 if(availableQuestions.length === 5 || questionCounter >= MAX_QUESTIONS){
-    return window.location.assign("end.html")
+    return window.location.assign("end.html");
 }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
@@ -30,13 +30,13 @@ if(availableQuestions.length === 5 || questionCounter >= MAX_QUESTIONS){
     
 
     choices.forEach( choice => {
-        const number = choice.dataset['number'];
+        const number = choice.dataset.number;
         choice.innerText = currentQuestion['choice' + number];
-    })
+    });
 
-    availableQuestions.splice(questionIndex, 2)
+    availableQuestions.splice(questionIndex, 1);
  
-};
+}
 
 
 
@@ -44,7 +44,7 @@ function checkAnswer(){
 choices.forEach(choice =>{
     choice.addEventListener( "click", e => {
     const  selectedChoice = e.target;
-    const selectedAnswer = selectedChoice.dataset["number"];
+    const selectedAnswer = selectedChoice.dataset.number;
 
      const classToApply = 
      selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
@@ -52,7 +52,7 @@ choices.forEach(choice =>{
      selectedChoice.parentElement.classList.add(classToApply);
      setTimeout(() => {
         selectedChoice.parentElement.classList.remove(classToApply);
-        getNewQuestion()
+        getNewQuestion();
        
      }, 1000);
    
@@ -60,14 +60,14 @@ choices.forEach(choice =>{
 
 
    
-    })
+    });
     
 });
 
 }
 
 
-checkAnswer()
+checkAnswer();
 
-startGame()
+startGame();
 
