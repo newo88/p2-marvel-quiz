@@ -8,7 +8,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 let MAX_QUESTIONS = 5;
 let quizContainer = document.getElementsByClassName("quizselector")
-
+let correct = document.getElementById("correct");
 //questions.classList.add("hide")
 
 
@@ -38,6 +38,7 @@ function startGameIron() {
       score = 0;
       availableQuesions = [...ironmanQuiz];
       getNewQuestion();
+      checkAnswer();
 
 }
 
@@ -46,6 +47,7 @@ function startGameAmerica() {
     score = 0;
     availableQuesions = [...americaQuiz];
     getNewQuestion();
+    checkAnswer();
 
 }
 
@@ -54,9 +56,23 @@ function startGameThor() {
     score = 0;
     availableQuesions = [...thorQuiz];
     getNewQuestion();
+    checkAnswer();
 
 }
 
+/**
+ * Increments the number of questions answered by the users.
+ */
+function answeredQuestions (){
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++oldScore;
+
+}
+
+function correctAnswers(){
+    let correct = parseInt(document.getElementById("correct").innerText)
+    document.getElementById("correct").innerText = ++correct;
+}
 
 function getNewQuestion() {
 if(availableQuesions.length === 10 || questionCounter >= MAX_QUESTIONS){
@@ -73,6 +89,7 @@ if(availableQuesions.length === 10 || questionCounter >= MAX_QUESTIONS){
         choice.innerText = currentQuestion['choice' + number];
     });
 
+
     availableQuestions.splice(questionIndex, 1);
  
 }
@@ -80,27 +97,35 @@ if(availableQuesions.length === 10 || questionCounter >= MAX_QUESTIONS){
 
 
 function checkAnswer(){
+    
 choices.forEach(choice =>{
     choice.addEventListener( "click", e => {
-    const  selectedChoice = e.target;
+    const  selectedChoice = e.target; 
     const selectedAnswer = selectedChoice.dataset.number;
+    
+    if (selectedAnswer == currentQuestion.answer){
+        correctAnswers();
+    }
 
+    answeredQuestions();
+  
      const classToApply = 
      selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
      selectedChoice.parentElement.classList.add(classToApply);
      setTimeout(() => {
         selectedChoice.parentElement.classList.remove(classToApply);
         getNewQuestion();
-       
+        
      }, 1000);
    
+     console.log(selectedChoice, selectedAnswer)
     });
-    
+   
 });
 
 }
 
-checkAnswer();
+
 
 
 
