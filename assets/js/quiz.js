@@ -3,21 +3,28 @@ const questions = document.getElementById('questions');
 const choices = Array.from(document.getElementsByClassName('choice-text')); 
 let currentQuestion = {};
 //let acceptingAnswer = true;
-let score = 0;
+let score = document.getElementById("score");
 let questionCounter = 0;
 let availableQuestions = [];
 let MAX_QUESTIONS = 5;
+let quizContainer = document.getElementsByClassName("quizselector")
+
+//questions.classList.add("hide")
 
 
-;
 document.addEventListener("DOMContentLoaded", function (){
     let buttons = document.getElementsByTagName("button")
     for (let button of buttons){
         button.addEventListener("click", function(){
            if(this.getAttribute("data-type") === "ironman"){
+             //  quizContainer.classList.add('hide')
                startGameIron();
-           }else {this.getAttribute("data-type") === "thor" 
-           startGameThor();}
+           }else if (this.getAttribute("data-type") === "thor"){ 
+           startGameThor();
+        } else if (this.getAttribute("data-type") === "captainAmerica"){ 
+            startGameAmerica();
+         } 
+ 
 
         });
 
@@ -31,6 +38,14 @@ function startGameIron() {
       score = 0;
       availableQuesions = [...ironmanQuiz];
       getNewQuestion();
+
+}
+
+function startGameAmerica() {
+    questionCounter = 0;
+    score = 0;
+    availableQuesions = [...americaQuiz];
+    getNewQuestion();
 
 }
 

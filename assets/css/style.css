@@ -28,3 +28,7 @@ body{
 .choice-text{
     cursor: pointer;
 }
+
+.hide{
+    display: none;
+}
