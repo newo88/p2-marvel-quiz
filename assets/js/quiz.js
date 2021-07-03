@@ -5,12 +5,13 @@ let currentQuestion = {};
 let score = document.getElementById("score");
 let questionCounter = 0;
 let availableQuestions = [];
-let MAX_QUESTIONS = 5;
+let MAX_QUESTIONS = 2;
 let buttons = document.getElementsByClassName("buttons")
 let correct = document.getElementById("correct");
 let gameArea = document.getElementById("gamearea")
 let answered = document.getElementById("answered");
 let startQuiz = document.getElementById("start-quiz")
+
 gameArea.style.display = "none";
 answered.style.display = "none";
 
@@ -19,18 +20,18 @@ document.addEventListener("DOMContentLoaded", function (){
     for (let button of buttons){
         button.addEventListener("click", function(){
            if(this.getAttribute("data-type") === "ironman"){
-               gameArea.style.display = "block"
+              gameArea.style.display = "grid"
                startQuiz.style.display = "none"
                startGameIron();
           
            }else if (this.getAttribute("data-type") === "thor"){ 
-            gameArea.style.display = "block"
-           
+            gameArea.style.display = "grid"
+            startQuiz.style.display = "none"
            startGameThor();
           
         } else if (this.getAttribute("data-type") === "captainAmerica"){ 
-            gameArea.style.display = "block"
-           
+            gameArea.style.display = "grid"
+            startQuiz.style.display = "none"
             startGameAmerica();
             
          } 
