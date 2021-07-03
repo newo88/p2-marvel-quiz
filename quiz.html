@@ -8,47 +8,56 @@
     <title>Marvel Quiz</title>
 </head>
 <body>
-    <h1>Marvel Quiz</h1>
+
+    <section id="quiz-container">
+   
 
 <div class="container" id="gamearea">
-    <div id="game">
+    <h1 id="heading">Marvel Quiz</h1>
+  <!--  <div id="game">-->
         <h2 id="question">What is the answer</h2>
-        <div class="choice-container">
+        <div id="answer-a" class="choice-container">
             <p class="choice-prefix">A</p>
             <p class="choice-text"  data-number="1"> </p>
         </div>
 
-        <div class="choice-container">
+        <div id="answer-b"  class="choice-container">
             <p class="choice-prefix">B</p>
             <p class="choice-text" data-number="2"> </p>
         </div>
 
-        <div class="choice-container">
+        <div id="answer-c" class="choice-container">
             <p class="choice-prefix">C</p>
             <p class="choice-text" data-number="3"> </p>
         </div>
 
-        <div class="choice-container">
+        <div id="answer-d" class="choice-container">
             <p class="choice-prefix">D</p>
             <p class="choice-text" data-number="4"> </p>
         </div>
-    </div>
+  <!--  </div>-->
 
-    <div>Questions amswered <span id="score">0</span></div>
+    <div id="answered-questions" >Questions Answered <span id="score">0</span> out of 10</div>
 
 </div>
-<div class="buttons">
+
+
+
+
+<div id="start-quiz">
+    <p>PLEASE SELECT THE HERO YOU WOULD LIKE TO TEST YOUR KNOLODGE ON</p>
+
     <button id="manquiz" data-type="ironman" >IronMan</button>
     <button id="captain-america-quiz"data-type="captainAmerica" >Captain America</button>
     <button id="thor-quiz" data-type="thor">Thor</button>
 </div>
 
+<div id="answered">
+<h2>Congragulation's</h2>
+    <p>YOU GOT <span id="correct">0</span> QUESTIONS RIGHT!</p>
+</div>
 
-<div>
-    <h2>Congragulation's</h2>
-    <p id="finalscore">YOU GOT <span id="correct">0</span> QUESTIONS RIGHT!</p>
- </div>
-
+</section>
 
     <script src="assets/js/ironman.js"></script>
     <script src="assets/js/america.js"></script>
