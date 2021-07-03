@@ -1,5 +1,6 @@
 body{
     background-color: grey;
+ 
 }
 
 .correct{
@@ -31,4 +32,9 @@ body{
 
 .hide{
     display: none;
+}
+
+.container{
+    display: flex;
+    align-items: center;
 }
