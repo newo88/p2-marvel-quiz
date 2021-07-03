@@ -91,7 +91,6 @@ function correctAnswers(){
 
 function getNewQuestion() {
 if(availableQuesions.length === 10 || questionCounter >= MAX_QUESTIONS){
-    //return window.location.assign("end.html");
     answered.style.display = "block"
     gameArea.style.display = "none";
     setTimeout(() => {
