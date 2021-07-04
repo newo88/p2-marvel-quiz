@@ -1,89 +1,89 @@
 const thorQuiz = [
     
     {
-        question: "asdfaf",
-        choice1: "Iron Man",
-        choice2: "Thor",
-        choice3: "Captain America",
-        choice4: "hulk",
-        answer: 1,
+        question: "What is the name of Thor's enchanted hammer?",
+        choice1: "Might Hammer",
+        choice2: "Asgaurd",
+        choice3: "Mjolnir",
+        choice4: "Fenris",
+        answer: 3,
          },
 
      
         {
-            question: "asdfaf" ,
-            choice1: "Chris Evens",
-            choice2: "Robert Downey Jr",
-            choice3: "Happy Hogan",
-            choice4: "Sandra ",
+            question: "Who is Thors Father?" ,
+            choice1: "Odin",
+            choice2: "Loki",
+            choice3: "Zeus",
+            choice4: "Asgaurd",
             answer: 2,
         },
 
         {
-            question: "asdfaf",
+            question: "Who was the first Marvel character to lift Thors Hammer",
             choice1: "Antman",
             choice2: "Winter Soldier",
-            choice3: "Spiderman",
+            choice3: "Captain America",
             choice4: "Black Widow",
             answer: 3,
         },
 
         {
-            question: "asdfaf",
-            choice1: "2001",
-            choice2: "2014",
-            choice3: "20010",
-            choice4: "2008",
+            question: "What is the Name of Thors Love interest?",
+            choice1: "Sharon Carter",
+            choice2: "May Forever",
+            choice3: "June Forester",
+            choice4: "Jane Foster",
             answer: 4,
         },
 
 
         {
-            question: "asdfaf",
-            choice1: "Iron Man",
-            choice2: "Super Pots",
-            choice3: "Rescue",
-            choice4: "Aqua Woman",
+            question: "Where does Thor live",
+            choice1: "Earth",
+            choice2: "Asgaurd",
+            choice3: "Moon",
+            choice4: "Jupiter",
+            answer: 2,
+        },
+
+
+        {
+            question: "What was foretold to be the end of Asgard",
+            choice1: "Ragnorak",
+            choice2: "The End!",
+            choice3: "Time Crush",
+            choice4: "Mjolnir",
+            answer: 4,
+        },
+
+
+        {
+            question:"Thor also had an axe what was the name of it?",
+            choice1: "Storm Bringer",
+            choice2: "War Bringer",
+            choice3: "Storm Breaker",
+            choice4: "Mighty Axe",
+            answer: 2,
+        },
+
+
+        {
+            question: "Finish this saying 'Whosoever holds this hammer, if they be worthy'",
+            choice1: "Shall have Glory",
+            choice2: "Shall have Great power",
+            choice3: "Shall possess the power of Thor",
+            choice4: "Shall have Ritches",
             answer: 3,
         },
 
 
         {
-            question: "asdfaf",
-            choice1: "Monday",
-            choice2: "Haris",
-            choice3: "Marvin",
-            choice4: "Jarvis",
-            answer: 4,
-        },
-
-
-        {
-            question:"asdfaf",
-            choice1: "Iron Man",
-            choice2: "Robert Downey Jr",
-            choice3: "Captain America",
-            choice4: "hulk",
-            answer: 2,
-        },
-
-
-        {
-            question: "asdfaf",
-            choice1: "The Dark Elves",
-            choice2: "The Mandarin",
-            choice3: "The Mandalorian",
-            choice4: "The Silver Surfer",
-            answer: 2,
-        },
-
-
-        {
-            question: "asdfaf",
-            choice1: "Howard Stark",
-            choice2: "Batman",
-            choice3: "Captain America",
-            choice4: "Hulk",
+            question: "What was Thors sisters name?",
+            choice1: "Hela",
+            choice2: "Helen",
+            choice3: "Jane",
+            choice4: "June",
             answer: 3,
         },
 

@@ -11,6 +11,8 @@ let correct = document.getElementById("correct");
 let gameArea = document.getElementById("gamearea")
 let answered = document.getElementById("answered");
 let startQuiz = document.getElementById("start-quiz")
+let timeLeft = document.getElementById("timeleft")
+let count = 5;
 
 gameArea.style.display = "none";
 answered.style.display = "none";
@@ -72,6 +74,19 @@ function startGameThor() {
     checkAnswer();
 
 }
+
+
+setInterval(function(){
+  timeLeft.innerHTML=count;
+  count--;
+  if (count === -1){  
+    setInterval(count); 
+    answeredQuestions();
+    getNewQuestion();
+      
+}else {}
+},1000 );
+
 
 
 

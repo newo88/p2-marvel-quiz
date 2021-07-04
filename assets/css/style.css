@@ -9,6 +9,16 @@ body{
 
 }
 
+.choice-text{
+    background-color: red;
+    width: 0 auto;
+}
+
+#question{
+    background-color: aliceblue;
+    
+}
+
 a{
     text-decoration: none;
     color: black;
