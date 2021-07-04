@@ -4,6 +4,12 @@ body{
   padding: 0;
 }
 
+
+#answered{
+    text-align: center;
+    font-size: 60px;
+}
+
 #start{
     font-size: 30px;
     border: 2px solid black;

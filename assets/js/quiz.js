@@ -5,12 +5,12 @@ let currentQuestion = {};
 let score = document.getElementById("score");
 let questionCounter = 0;
 let availableQuestions = [];
-let MAX_QUESTIONS = 10;
+let MAX_QUESTIONS = 5;
 let buttons = document.getElementsByClassName("buttons")
 let correct = document.getElementById("correct");
 let gameArea = document.getElementById("gamearea")
 let answered = document.getElementById("answered");
-let startQuiz = document.getElementById("start-quiz")
+let startQuiz = document.getElementById("start-quiz");
 let timeLeft = document.getElementById("timeleft")
 let count = 5;
 
@@ -22,18 +22,18 @@ document.addEventListener("DOMContentLoaded", function (){
     for (let button of buttons){
         button.addEventListener("click", function(){
            if(this.getAttribute("data-type") === "ironman"){
-              gameArea.style.display = "grid"
-               startQuiz.style.display = "none"
+              gameArea.style.display = "grid";
+               startQuiz.style.display = "none";
                startGameIron();
           
            }else if (this.getAttribute("data-type") === "thor"){ 
-            gameArea.style.display = "grid"
-            startQuiz.style.display = "none"
+            gameArea.style.display = "grid";
+            startQuiz.style.display = "none";
            startGameThor();
           
         } else if (this.getAttribute("data-type") === "captainAmerica"){ 
-            gameArea.style.display = "grid"
-            startQuiz.style.display = "none"
+            gameArea.style.display = "grid";
+            startQuiz.style.display = "none";
             startGameAmerica();
             
          } 
@@ -42,18 +42,17 @@ document.addEventListener("DOMContentLoaded", function (){
         });
 
     }
-})
+});
 
 
 
 function startGameIron() {
-   
       questionCounter = 0;
       score = 0;
       availableQuesions = [...ironmanQuiz];
       getNewQuestion();
       checkAnswer();
-      ;
+      
 
 }
 
@@ -75,17 +74,28 @@ function startGameThor() {
 
 }
 
+//let endMessage = document.getElementById("end-message")
 
-setInterval(function(){
-  timeLeft.innerHTML=count;
-  count--;
-  if (count === -1){  
-    setInterval(count); 
-    answeredQuestions();
-    getNewQuestion();
-      
-}else {}
-},1000 );
+//if (correctAnswers = 5){
+//    endMessage.innerHTML = `Congragulations you got ${correct} you know your stuff`;
+//}else{
+// if (correctAnswers >= 5){
+//      endMessage.innerHTML = `You only got ${correct} you need to freshen up`
+//  }
+//}
+
+
+
+
+
+
+//let interval = setInterval(function(){
+ // timeLeft.innerHTML=count;
+  //count--;
+ // if (count <= -1){
+ //   clearInterval(count); 
+//}
+//},1000 );
 
 
 
@@ -98,15 +108,24 @@ function answeredQuestions (){
     document.getElementById("score").innerText = ++oldScore;
 
 }
-
+/**
+ * Increments number of correct answers
+ */
 function correctAnswers(){
-    let correct = parseInt(document.getElementById("correct").innerText)
+    let correct = parseInt(document.getElementById("correct").innerText);
     document.getElementById("correct").innerText = ++correct;
 }
 
+
+/**
+ * Generates a new Question for the user at random.
+ * When the user hits the max number of questions,
+ * displays the total correct answers and returns them
+ * to the index page.
+ */
 function getNewQuestion() {
 if(availableQuesions.length === 10 || questionCounter >= MAX_QUESTIONS){
-    answered.style.display = "block"
+    answered.style.display = "block";
     gameArea.style.display = "none";
     setTimeout(() => {
         return window.location.assign("index.html")
@@ -131,7 +150,14 @@ if(availableQuesions.length === 10 || questionCounter >= MAX_QUESTIONS){
 }
 
 
-
+/**
+ * Check the users answer with the answer assigned to the question.
+ * if the correct answer is selected it will flash green
+ * if incorrect answer is selected it will  flash red
+ * When the user answers the answeredQuestions function is 
+ * called and adds 1 to answered questions.
+ * then a new question is called.
+ */
 function checkAnswer(){
     
 choices.forEach(choice =>{
@@ -154,14 +180,10 @@ choices.forEach(choice =>{
         
      }, 1000);
    
-     console.log(selectedChoice, selectedAnswer)
+     
     });
    
 });
 
 }
-
-
-
-
 
