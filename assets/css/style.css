@@ -1,13 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&display=swap');
+
 body{
-    background-color: grey;
+    font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
+  
 }
 
+#question{
+         font-size: 35px;
+}
 
+.container>div{
+   
+    font-weight: 500;
+    font-size: 15px;
+    
+}
 #answered{
     text-align: center;
     font-size: 60px;
+    
 }
 
 #start{
@@ -95,7 +108,7 @@ iframe{
 .container>div{
     border: 2px solid black;
     border-radius: 4px;
-    box-shadow: 5px 10px #ac8484;
+    box-shadow: 5px 10px #e93131;
     
 }
 

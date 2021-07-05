@@ -49,7 +49,7 @@ const americaQuiz = [
 
 
         {
-            question: "In Avengers: Civil War, who does Captain America fight?",
+            question: "In Avengers Civil War, who does Captain America fight?",
             choice1: "Hulk",
             choice2: "Iron Man",
             choice3: "Vision",
@@ -84,7 +84,7 @@ const americaQuiz = [
             choice2: "Howard Stark",
             choice3: "Tony Stark",
             choice4: "Asgard",
-            answer: 3,
+            answer: 2,
         },
 
 
