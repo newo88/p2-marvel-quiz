@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&display=swap');
 
 body{
+    height: 100%vh;
     font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
-  
+  background: rgb(237,15,15);
+background: linear-gradient(183deg, rgba(237,15,15,1) 0%, rgba(253,29,29,1) 20%, rgba(253,62,38,1) 35%, rgba(252,157,64,1) 55%, rgba(251,241,35,1) 65%, rgba(237,15,15,1) 100%);
 }
 
 #question{
-         font-size: 35px;
+         font-size: 40px;
+}
+
+ul{
+    list-style-type: none;
+    font-size: 25px;
 }
 
 .container>div{
@@ -24,8 +31,14 @@ body{
 }
 
 #start{
-    font-size: 30px;
+    font-size: 50px;
+    margin-bottom: 50px;
     border: 2px solid black;
+}
+
+a:hover{
+    font-size: large;
+    color: rgba(251,241,35,1);
 }
 
 #start-quiz{
@@ -33,21 +46,22 @@ body{
    width: 100%;
 }
 
-#hero{
-    font-size: 20px;
-    margin-top: 50px;
-}
 
 button{
     padding: 0;
     margin: 0;
+    margin-right: 40px;
+
 }
+
+
 
 img{
     padding: 0;
     margin:0;
-    height:400px;
-    width:400px;
+    height:250px;
+    width:250px;
+    
 }
 
 h1{
@@ -60,13 +74,18 @@ h1{
 }
 
 #front-text{
+    display: flex;
     font-size: 30px;
+    align-items: center;
+  justify-content: center;
+
 }
 
 
 a{
     text-decoration: none;
     color: black;
+    
 }
 
 #landingpage{
@@ -93,12 +112,18 @@ a{
 
 .choice-text{
     cursor: pointer;
+    font-size: 20px;
 }
 
+#herobg{
+    width: 800px;
+}
 
-iframe{
-    width: 60%;
-    height: 300px;
+#hero{
+    font-size: 40px;
+    border: 2px solid black;
+    margin: 40px 40px;
+    padding: 20px 20px;
 }
 
 #game{
@@ -108,13 +133,13 @@ iframe{
 .container>div{
     border: 2px solid black;
     border-radius: 4px;
-    box-shadow: 5px 10px #e93131;
+    box-shadow: 5px 10px black;
     
 }
 
 .container{
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 15px;
     text-align: center;
     grid-template-areas: 
     ". heading heading ."
@@ -122,6 +147,7 @@ iframe{
     '. answer-a answer-b .'
     '. answer-c answer-d .'
     '. answered-questions answered-questions .'
+    
     ;
 
     
@@ -157,4 +183,5 @@ iframe{
 
 #answered-questions{
     grid-area: answered-questions;
+    margin-bottom: 50px;
 }

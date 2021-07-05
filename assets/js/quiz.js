@@ -19,21 +19,18 @@ answered.style.display = "none";
 
 document.addEventListener("DOMContentLoaded", function (){
     let buttons = document.getElementsByTagName("button")
+    
     for (let button of buttons){
         button.addEventListener("click", function(){
+            gameArea.style.display = "grid";
+            startQuiz.style.display = "none";
            if(this.getAttribute("data-type") === "ironman"){
-              gameArea.style.display = "grid";
-               startQuiz.style.display = "none";
                startGameIron();
           
            }else if (this.getAttribute("data-type") === "thor"){ 
-            gameArea.style.display = "grid";
-            startQuiz.style.display = "none";
            startGameThor();
           
-        } else if (this.getAttribute("data-type") === "captainAmerica"){ 
-            gameArea.style.display = "grid";
-            startQuiz.style.display = "none";
+           } else if (this.getAttribute("data-type") === "captainAmerica"){ 
             startGameAmerica();
             
          } 
