@@ -1,59 +1,124 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Owen McGill_5P
 
-Welcome Owen McGill,
+## Full-Stack Development Course | Portfolio Project 2
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+View the live project here.
 
-## Gitpod Reminders
+The purpose of this site is to give the visitor a fun interactive quiz. This web application would be for anyone but especially any one how is a fan of the Marvel Universe. This is a place they can test there knowledge on some of there favourite characters annd see how much they really know. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## User Experience (UX)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+-   ### User stories
 
-A blue button should appear to click: _Make Public_,
+    -   #### First Time Visitor Goals
 
-Another blue button should appear to click: _Open Browser_.
+        1. As a First Time Visitor, I want to easily understand the main purpose of the site.
+        2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
+        
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+-   ### Design
+    -   #### Colour Scheme
+        -   The three main colours i used are blue black and white. I keep the colour scheme simple as not to take away from the photos of the consoles. Most of the photos have a white background and the console's them selves are mainly black and white in colour. The background colour has a gradient of light blue to dark blue so when the user is scrolling down through the page its not just the same block colour. 
 
-To log into the Heroku toolbelt CLI:
+    -   #### Typography
+        -   The Roboto font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Roboto is a clean font used frequently in programming, so it is both attractive and appropriate.
+    
+   ### Wireframes
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- The wireframes for the project can be found here [Wireframe](/workspace/p2-marvel-quiz/assets/wireframes)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
 
-## Updates Since The Instructional Video
+ 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Features
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+-   Responsive on all device sizes
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+![Test Image 3](assets/images/responsive.PNG)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Languages Used
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Frameworks, Libraries & Programs Used
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+1. [Balsamiq:](https://balsamiq.com/) This was used to create the wireframes for the project.
+   
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Testing
 
----
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-Happy coding!
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - 
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - 
+### Testing User Stories from User Experience (UX) Section
+
+-   #### First Time Visitor Goals
+
+-   Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice.
+
+-   The user has two options from the home page use the navigation bar at the top of the page or click the logo for the console they want to find out more about.
+
+-   When they get to the console page they are looking for they can scroll down and through them or there is a sub menu bar to take them straight to there console of choice.
+
+
+### Testing
+
+-   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
+-   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
+-   A large amount of testing was done to ensure that all pages were linking correctly.
+-   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+
+### Known Bugs
+
+-   In mobile view the youtube videos collapse down and are not as uniform as in the desktop view.
+
+## Development
+
+-   Further development of this site would include adding more companys and there consoles.
+
+-   Adding a gaming hand held section.
+
+-   Include a section for fixs for common know issues.
+
+-   Include tear down videos for cleaning and restoring vintage consoles and hand helds.   
+
+### Deployment
+
+-    The website was deployed to Github pages.
+
+      1. From the Github repository go to 'Settings'.
+
+      2. From there navigate to the section 'Pages'.
+
+      3. From the dropdown menu in the section labeled 'Source' choose the option 'Master Branch' and click 'Save'.
+
+      4. Once saved a notification informing you the site has been published will appear with a link to the website.
+
+
+### Code
+
+-  The background were sourced using [CSS Gradient](https://cssgradient.io/) 
+
+### Content
+
+-   All Console information was sourced using [Wikipedia](https://www.wikipedia.org/)
+
+-   All of the videos were sourced from [Youtube](www.youtube.com)
+
+### Media
+
+-  Photos were sourced from wedsite's with free lisence file can be found here [IMAGES](https://github.com/newo88/p1console-origin/blob/master/docs/photos_p1.txt.odt)
+
+### Acknowledgements
+
+-   My Mentor Chris for continuous helpful feedback and advice.
+
+

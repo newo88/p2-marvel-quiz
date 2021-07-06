@@ -16,7 +16,7 @@ const thorQuiz = [
             choice2: "Loki",
             choice3: "Zeus",
             choice4: "Asgaurd",
-            answer: 2,
+            answer: 1,
         },
 
         {

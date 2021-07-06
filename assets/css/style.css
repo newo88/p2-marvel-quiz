@@ -55,13 +55,12 @@ button{
 
 
 
-img{
-    padding: 0;
-    margin:0;
-    height: 200px;
-    width:200px;
-    background-size: contain;
-    
+img {
+    justify-content: center;
+    width: 100%;
+    border-radius: 3px;
+    background-size: inherit;
+    height: 100%;
 }
 
 h1{
@@ -141,12 +140,13 @@ a{
     display: grid;
     grid-gap: 15px;
     text-align: center;
+    grid-template-columns: 3vw 1fr 1fr 3vw;
     grid-template-areas: 
-    ". heading heading ."
-    '. question question .'
-    '. answer-a answer-b .'
-    '. answer-c answer-d .'
-    '. answered-questions answered-questions .'
+    " . heading heading "
+    " . question question "
+    ". answer-a answer-b "
+    '. answer-c answer-d '
+    '. answered-questions answered-questions '
     
     ;
 
@@ -189,7 +189,8 @@ a{
 /*Grid layout for the quiz selection page*/
 .selection{
     display: grid;
-    grid-template-columns: 3vw 1fr 3vw;;
+    grid-template-columns: 1fr 800px 1fr;
+    grid-template-columns: repeat(400px);
     grid-gap: 10px;
     grid-template-areas: 
     " . hero"  
@@ -214,3 +215,22 @@ a{
 #captain-america-quiz{
     grid-area:captain-america-quiz;
 }
+
+
+@media (min-width: 950px) {
+    .selection{
+        display: grid;
+        grid-template-columns: 10vw repeat(2, minmax(40vw, auto)) 10vw;
+        grid-template-rows: 200px 500px 500px 500px;
+        grid-gap: 10px;
+        grid-template-areas: 
+        "  .hero hero"  
+        "  .manquiz captain-america-quiz" 
+        "  .thor-quiz ."
+      
+        ;
+    }
+
+
+}
+

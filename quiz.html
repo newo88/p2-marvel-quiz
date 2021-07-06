@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,20 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Marvel Quiz</title>
 </head>
+
 <body>
 
-    <section id="quiz-container">
-   
-        
-<div class="container" id="gamearea">
-        
-         <h1 id="heading">Marvel Quiz</h1>
- 
+    <div class="container" id="gamearea">
+
+        <h1 id="heading">Marvel Quiz</h1>
+
         <h2 id="question">What is the answer</h2>
         <div id="answer-a" class="choice-container">
             <p class="choice-prefix">A</p>
-            <p class="choice-text"  data-number="1"> </p>
+            <p class="choice-text" data-number="1"> </p>
         </div>
 
-        <div id="answer-b"  class="choice-container">
+        <div id="answer-b" class="choice-container">
             <p class="choice-prefix">B</p>
             <p class="choice-text" data-number="2"> </p>
         </div>
@@ -36,38 +35,36 @@
             <p class="choice-prefix">D</p>
             <p class="choice-text" data-number="4"> </p>
         </div>
-  <!--  </div>-->
 
-    <div id="answered-questions" >
-        <p>Questions Answered <span id="score">0</span> out of 10</p>
-        <p>Time Left:<span id="timeleft">0</span></p>
+
+        <div id="answered-questions">
+            <p>Questions Answered <span id="score">0</span> out of 10</p>
+            <p>Time Left:<span id="timeleft">0</span></p>
+        </div>
+
     </div>
-    
-</div>
-
-</section>
 
 
-<div id="start-quiz" class="selection">
-    <p id="hero">SELECT YOUR HERO </p>
 
-    <button id="manquiz" data-type="ironman" >IRONMAN</button>
-    <button id="captain-america-quiz"data-type="captainAmerica" >CAPTAIN AMERICA</button>
-    <button id="thor-quiz" data-type="thor">THOR</button>
-</div>
+    <div id="start-quiz" class="selection">
+        <p id="hero">SELECT YOUR HERO </p>
 
-<div id="answered">
-<h2 id="end"><span id="end-message">0</span></h2>
-   
-    <p>YOU GOT <span id="correct">0</span> QUESTIONS RIGHT!</p>
-    
-</div>
+        <button id="manquiz" data-type="ironman"><img src="assets/images/ironmanbtn.jpg" alt="" srcset="">/button>
+        <button id="captain-america-quiz" data-type="captainAmerica"><img src="assets/images/americabutton.jpg" alt="" srcset=""></button>
+        <button id="thor-quiz" data-type="thor"><img src="assets/images/thorbtn.jpg" alt="" srcset=""></button>
+    </div>
 
+    <div id="answered">
+        <h2 id="end"><span id="end-message">0</span></h2>
 
+        <p>YOU GOT <span id="correct">0</span> QUESTIONS RIGHT!</p>
+
+    </div>
 
     <script src="assets/js/ironman.js"></script>
     <script src="assets/js/america.js"></script>
     <script src="assets/js/thor.js"></script>
     <script src="assets/js/quiz.js"></script>
 </body>
+
 </html>
