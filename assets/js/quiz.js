@@ -5,7 +5,7 @@ let currentQuestion = {};
 let score = document.getElementById("score");
 let questionCounter = 0;
 let availableQuestions = [];
-let MAX_QUESTIONS = 5;
+let MAX_QUESTIONS = 4;
 let buttons = document.getElementsByClassName("buttons")
 let correct = document.getElementById("correct");
 let gameArea = document.getElementById("gamearea")
@@ -58,28 +58,6 @@ function startGame() {
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-//let interval = setInterval(function(){
- // timeLeft.innerHTML=count;
-  //count--;
- // if (count <= -1){
- //   clearInterval(count); 
-//}
-//},1000 );
-
-
-
-
 /**
  * Increments the number of questions answered by the users.
  */
@@ -96,8 +74,8 @@ function correctAnswers(){
     document.getElementById("correct").innerText = ++correct;
 
 
-//let endMessage = document.getElementById("end-message")
-//let end = document.getElementById("end");
+//  Prints a message to the user when they are finsh the quiz depending on the number of correct answer they got.  
+ 
 
 if (correct >=8 ){
     document.getElementById("end-message").innerHTML = `Congragulations you are Worthy to possess Thors Hammer`;
@@ -124,7 +102,7 @@ if(availableQuesions.length === 10 || questionCounter >= MAX_QUESTIONS){
     setTimeout(() => {
         return window.location.assign("index.html")
         
-     }, 2000);
+     }, 5000);
     
 }
     questionCounter++;

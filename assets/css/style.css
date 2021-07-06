@@ -11,6 +11,7 @@ background: linear-gradient(183deg, rgba(237,15,15,1) 0%, rgba(253,29,29,1) 20%,
 
 #question{
          font-size: 40px;
+         border: 2px solid black;
 }
 
 ul{
@@ -26,7 +27,8 @@ ul{
 }
 #answered{
     text-align: center;
-    font-size: 60px;
+    font-size: 40px;
+    border: 2px solid black;
     
 }
 
@@ -36,10 +38,7 @@ ul{
     border: 2px solid black;
 }
 
-a:hover{
-    font-size: large;
-    color: rgba(251,241,35,1);
-}
+
 
 #start-quiz{
    text-align: center;
@@ -50,7 +49,7 @@ a:hover{
 button{
     padding: 0;
     margin: 0;
-    margin-right: 40px;
+
 
 }
 
@@ -59,8 +58,9 @@ button{
 img{
     padding: 0;
     margin:0;
-    height:250px;
-    width:250px;
+    height: 200px;
+    width:200px;
+    background-size: contain;
     
 }
 
@@ -184,4 +184,33 @@ a{
 #answered-questions{
     grid-area: answered-questions;
     margin-bottom: 50px;
+}
+
+/*Grid layout for the quiz selection page*/
+.selection{
+    display: grid;
+    grid-template-columns: 3vw 1fr 3vw;;
+    grid-gap: 10px;
+    grid-template-areas: 
+    " . hero"  
+    " . manquiz" 
+    " . captain-america-quiz"
+    " . thor-quiz"
+    ;
+}
+
+#manquiz{
+    grid-area: manquiz;
+}
+
+#thor-quiz{
+    grid-area: thor-quiz;
+}
+
+#hero{
+    grid-area: hero;
+}
+
+#captain-america-quiz{
+    grid-area:captain-america-quiz;
 }
