@@ -25,13 +25,16 @@ document.addEventListener("DOMContentLoaded", function (){
             gameArea.style.display = "grid";
             startQuiz.style.display = "none";
            if(this.getAttribute("data-type") === "ironman"){
-               startGameIron();
+            availableQuesions = [...ironmanQuiz];
+            startGame()
           
            }else if (this.getAttribute("data-type") === "thor"){ 
-           startGameThor();
+            availableQuesions = [...americaQuiz];
+           startGame();
           
-           } else if (this.getAttribute("data-type") === "captainAmerica"){ 
-            startGameAmerica();
+           } else if (this.getAttribute("data-type") === "captainAmerica"){
+            availableQuesions = [...thorQuiz]; 
+            startGame();
             
          } 
  
@@ -43,43 +46,23 @@ document.addEventListener("DOMContentLoaded", function (){
 
 
 
-function startGameIron() {
+/**
+ * The start game function. This is called when the user selects their hero.
+ */
+
+function startGame() {
       questionCounter = 0;
       score = 0;
-      availableQuesions = [...ironmanQuiz];
       getNewQuestion();
       checkAnswer();
-      
-
+    
 }
 
-function startGameAmerica() {
-    questionCounter = 0;
-    score = 0;
-    availableQuesions = [...americaQuiz];
-    getNewQuestion();
-    checkAnswer();
 
-}
 
-function startGameThor() {
-    questionCounter = 0;
-    score = 0;
-    availableQuesions = [...thorQuiz];
-    getNewQuestion();
-    checkAnswer();
 
-}
 
-//let endMessage = document.getElementById("end-message")
 
-//if (correctAnswers = 5){
-//    endMessage.innerHTML = `Congragulations you got ${correct} you know your stuff`;
-//}else{
-// if (correctAnswers >= 5){
-//      endMessage.innerHTML = `You only got ${correct} you need to freshen up`
-//  }
-//}
 
 
 
@@ -111,6 +94,20 @@ function answeredQuestions (){
 function correctAnswers(){
     let correct = parseInt(document.getElementById("correct").innerText);
     document.getElementById("correct").innerText = ++correct;
+
+
+//let endMessage = document.getElementById("end-message")
+//let end = document.getElementById("end");
+
+if (correct >=8 ){
+    document.getElementById("end-message").innerHTML = `Congragulations you are Worthy to possess Thors Hammer`;
+}else if(correct >= 6){
+    document.getElementById("end-message").innerHTML = `Well done you are nearly there try again`;
+}else if(correct >= 4){
+    document.getElementById("end-message").innerHTML = `HMMMMM are you sure your a marvel fan?`;
+}else if(correct >= 2){
+    document.getElementById("end-message").innerHTML = `You need to hit the Comics and freshen up`;
+}
 }
 
 
@@ -183,4 +180,5 @@ choices.forEach(choice =>{
 });
 
 }
+
 
