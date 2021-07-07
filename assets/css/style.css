@@ -5,8 +5,8 @@ body{
     font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
-  background: rgb(237,15,15);
-background: linear-gradient(183deg, rgba(237,15,15,1) 0%, rgba(253,29,29,1) 20%, rgba(253,62,38,1) 35%, rgba(252,157,64,1) 55%, rgba(251,241,35,1) 65%, rgba(237,15,15,1) 100%);
+  background-color: #ae2012;
+ 
 }
 
 #question{
@@ -49,19 +49,11 @@ ul{
 button{
     padding: 0;
     margin: 0;
-
-
 }
 
 
 
-img {
-    justify-content: center;
-    width: 100%;
-    border-radius: 3px;
-    background-size: inherit;
-    height: 100%;
-}
+
 
 h1{
     font-size: 60px;
@@ -189,15 +181,20 @@ a{
 /*Grid layout for the quiz selection page*/
 .selection{
     display: grid;
-    grid-template-columns: 1fr 800px 1fr;
-    grid-template-columns: repeat(400px);
+    grid-template-columns: 3vw 1fr 3vw;
+    grid-template-rows: 200px 100px 100px 100px;
     grid-gap: 10px;
     grid-template-areas: 
     " . hero"  
     " . manquiz" 
     " . captain-america-quiz"
     " . thor-quiz"
+    " . marvel-universe"
     ;
+}
+
+#marvel-universe{
+    grid-area: marvel-universe;
 }
 
 #manquiz{
@@ -217,16 +214,16 @@ a{
 }
 
 
-@media (min-width: 950px) {
+@media (min-width: 800px) {
     .selection{
         display: grid;
         grid-template-columns: 10vw repeat(2, minmax(40vw, auto)) 10vw;
-        grid-template-rows: 200px 500px 500px 500px;
+        grid-template-rows: 200px 100px 100px 100px;
         grid-gap: 10px;
         grid-template-areas: 
-        "  .hero hero"  
+        "  . hero hero"  
         "  .manquiz captain-america-quiz" 
-        "  .thor-quiz ."
+        "  .thor-quiz marvel-universe"
       
         ;
     }
