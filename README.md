@@ -78,7 +78,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Known Bugs
 
--   In mobile view the youtube videos collapse down and are not as uniform as in the desktop view.
+
 
 ## Development
 
@@ -101,6 +101,32 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
       3. From the dropdown menu in the section labeled 'Source' choose the option 'Master Branch' and click 'Save'.
 
       4. Once saved a notification informing you the site has been published will appear with a link to the website.
+
+### Making a local Clone
+
+-    Steps to clone this repositiory.
+
+       1. On GitHub go to the main page of the Repository.
+
+       2. Above the list of files click the code menu with the drop down arrow.
+
+       3. To clone the repository using HTTPS, under "Clone with HTTPS", click on the clipboard.
+
+       4. Open the Git Bash ternimal.
+
+       5. Change the current working directory to the location where you want the cloned directory.
+
+       6. Type git clone, and then paste the URL you copied earlier from step 3.
+
+       7. Press Enter to create your local clone.
+
+
+
+####    To troubleshoot any problems in cloning please go to GitHub pages for more help. [GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository#troubleshooting-cloning-errors)
+
+
+
+
 
 
 ### Code
