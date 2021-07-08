@@ -58,6 +58,19 @@ function startGame() {
     
 }
 
+
+//let interval = setInterval(function(){
+ // document.getElementById('timeleft').innerHTML= count;
+ // count--;
+//  if (count === -1){
+  //    getNewQuestion();
+  //  clearInterval(interval);
+  //  interval();
+  //   }
+//}, 1000);
+
+
+
 /**
  * Increments the number of questions answered by the users.
  */

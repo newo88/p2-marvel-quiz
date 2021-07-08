@@ -32,7 +32,7 @@
                 question: "What year did the first Iron Man movie come out?",
                 choice1: "2001",
                 choice2: "2014",
-                choice3: "20010",
+                choice3: "2010",
                 choice4: "2008",
                 answer: 4,
             },
