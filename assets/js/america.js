@@ -168,7 +168,7 @@ const americaQuiz = [
             choice2: "A Bus",
             choice3: "A Car",
             choice4: "Thors Hammer",
-            answer: 2,
+            answer: 4,
         },
 
         {

@@ -1,3 +1,4 @@
+/*jshint esnext: true */
 const questions = document.getElementById('questions');
 //Array.from() method returns an Array object from any object with a length property or an iterable object.
 const choices = Array.from(document.getElementsByClassName('choice-text')); 
@@ -6,9 +7,9 @@ let score = document.getElementById("score");
 let questionCounter = 0;
 let availableQuestions = [];
 let MAX_QUESTIONS = 10;
-let buttons = document.getElementsByClassName("buttons")
+let buttons = document.getElementsByClassName("buttons");
 let correct = document.getElementById("correct");
-let gameArea = document.getElementById("gamearea")
+let gameArea = document.getElementById("gamearea");
 let answered = document.getElementById("answered");
 let startQuiz = document.getElementById("start-quiz");
 let timeLeft = document.getElementById("timeleft");
@@ -20,7 +21,7 @@ answered.style.display = "none";
 timeout.style.display = "none";
 
 document.addEventListener("DOMContentLoaded", function (){
-    let buttons = document.getElementsByTagName("button")
+    let buttons = document.getElementsByTagName("button");
     
     for (let button of buttons){
         button.addEventListener("click", function(){
@@ -28,18 +29,18 @@ document.addEventListener("DOMContentLoaded", function (){
             startQuiz.style.display = "none";
            if(this.getAttribute("data-type") === "ironman"){
             availableQuestions = [...ironmanQuiz];
-            startGame()
+            startGame();
           
            }else if (this.getAttribute("data-type") === "thor"){ 
-            availableQuestions = [...americaQuiz];
+            availableQuestions = [...thorQuiz];
            startGame();
           
            } else if (this.getAttribute("data-type") === "captainAmerica"){
-            availableQuestions = [...thorQuiz]; 
+            availableQuestions = [...americaQuiz]; 
             startGame();
             
          } else if (this.getAttribute("data-type") === "universe"){
-            availableQuesions = [...marvelQuiz]; 
+            availableQuestions = [...marvelQuiz]; 
             startGame();
             
          } 
@@ -90,13 +91,13 @@ function correctAnswers(){
  
 
 if (correct >=8 ){
-    document.getElementById("end-message").innerHTML = `Congragulations you are Worthy to possess Thors Hammer`;
+    document.getElementById("end-message").innerHTML = `Congragulations YOUR A TRUE MARVEL FAN`;
 }else if(correct >= 6){
-    document.getElementById("end-message").innerHTML = `Well done you are nearly there try again`;
+    document.getElementById("end-message").innerHTML = `WELL DONE YOUR NEARLY THERE TRY AGAIN`;
 }else if(correct >= 4){
-    document.getElementById("end-message").innerHTML = `HMMMMM are you sure your a marvel fan?`;
+    document.getElementById("end-message").innerHTML = `HMMMMM ARE YOU SURE YOUR A MARVEL FAN?`;
 }else if(correct >= 2){
-    document.getElementById("end-message").innerHTML = `You need to hit the Comics and freshen up`;
+    document.getElementById("end-message").innerHTML = `YOU NEED TO HIT THE COMICS AND FRESHEN UP`;
 }
 }
 
@@ -112,7 +113,7 @@ if(availableQuestions.length === 10 || questionCounter >= MAX_QUESTIONS){
     answered.style.display = "block";
     gameArea.style.display = "none";
     setTimeout(() => {
-        return window.location.assign("index.html")
+        return window.location.assign("index.html");
         
      }, 5000);
     
@@ -131,7 +132,7 @@ if(availableQuestions.length === 10 || questionCounter >= MAX_QUESTIONS){
 
     availableQuestions.splice(questionIndex, 1);
  
-};
+}
 
 
 /**
