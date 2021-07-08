@@ -15,8 +15,12 @@ body{
          border: 2px solid black;
 }
 
+
+
 #rules{
-    font-size: 20px;
+    font-size: 30px;
+    border: 2px solid black;
+
 }
 
 
@@ -136,6 +140,50 @@ a{
 p{
     color:khaki;
 }
+
+.landingpage>div{
+    border-radius: 10px;
+}
+
+.landingpage{
+    display: grid;
+    grid-template-columns: 30vw 1fr 30vw;
+    text-align: center;
+    grid-gap: 20px;
+    grid-template-areas: 
+    " . heading"
+    " . video "
+    " . rules "
+    " . start "
+
+    ;
+}
+
+
+
+.heading{
+    grid-area: heading;
+}
+
+#video{
+   grid-area: video;
+}
+
+#rules{
+    grid-area: rules;
+
+    
+}
+
+#start{
+    grid-area: start;
+}
+
+iframe{
+    width: 560px; 
+    height: 315px;
+}
+
 
 .container{
     display: grid;

@@ -59,15 +59,17 @@ function startGame() {
 }
 
 
-//let interval = setInterval(function(){
- // document.getElementById('timeleft').innerHTML= count;
- // count--;
-//  if (count === -1){
-  //    getNewQuestion();
-  //  clearInterval(interval);
-  //  interval();
-  //   }
-//}, 1000);
+let interval = setInterval(function(){
+ document.getElementById('timeleft').innerHTML= count;
+  count--;
+  if (count === -1){
+     clearInterval(interval);
+     setTimeout(() => {
+        return window.location.assign("index.html")
+        
+     }, 5000);
+     }
+}, 1000);
 
 
 
