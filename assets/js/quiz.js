@@ -13,7 +13,7 @@ let answered = document.getElementById("answered");
 let startQuiz = document.getElementById("start-quiz");
 let timeLeft = document.getElementById("timeleft");
 let timeOut = document.getElementById("timeout");
-let count = 5;
+let count = 10;
 
 gameArea.style.display = "none";
 answered.style.display = "none";
@@ -36,6 +36,10 @@ document.addEventListener("DOMContentLoaded", function (){
           
            } else if (this.getAttribute("data-type") === "captainAmerica"){
             availableQuesions = [...thorQuiz]; 
+            startGame();
+            
+         } else if (this.getAttribute("data-type") === "universe"){
+            availableQuesions = [...marvelQuiz]; 
             startGame();
             
          } 
@@ -61,21 +65,7 @@ function startGame() {
 }
 
 
-let interval = setInterval(function(){
- document.getElementById('timeleft').innerHTML= count;
-  count--;
-  if (count === -1){
-     clearInterval(interval);
-     gameArea.style.display = "none";
-     timeout.style.display = "block";
-     setTimeout(() => {
-       
-    
-        return window.location.assign("index.html")
-        
-     }, 5000);
-     }
-}, 1000);
+
 
 
 
@@ -98,13 +88,13 @@ function correctAnswers(){
 //  Prints a message to the user when they are finsh the quiz depending on the number of correct answer they got.  
  
 
-if (correct >=8 ){
+if (correct <=8 ){
     document.getElementById("end-message").innerHTML = `Congragulations you are Worthy to possess Thors Hammer`;
-}else if(correct >= 6){
+}else if(correct <= 6){
     document.getElementById("end-message").innerHTML = `Well done you are nearly there try again`;
-}else if(correct >= 4){
+}else if(correct <= 4){
     document.getElementById("end-message").innerHTML = `HMMMMM are you sure your a marvel fan?`;
-}else if(correct >= 2){
+}else if(correct <= 2){
     document.getElementById("end-message").innerHTML = `You need to hit the Comics and freshen up`;
 }
 }
@@ -180,4 +170,18 @@ choices.forEach(choice =>{
 
 }
 
-
+//let interval = setInterval(function timer(){
+  //  document.getElementById('timeleft').innerHTML= count;
+    // count--;
+    // if (count === -1){
+     //   clearInterval(interval);
+      //  gameArea.style.display = "none";
+       // timeout.style.display = "block";
+        //setTimeout(() => {
+          
+       
+          // return window.location.assign("index.html")
+           
+       // }, 5000);
+       // }
+  // }, 1000);

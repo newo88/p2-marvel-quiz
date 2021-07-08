@@ -1,43 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&display=swap');
 
-body{
-  
-  font-family: Roboto, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #ae2012;
-  color: #FCBF49;
- 
-}
+body {
 
-#question{
-         font-size: 40px;
-         border: 2px solid black;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+   background-color: coral;
+    color: black;
+
 }
 
 
+.landingpage>div {
+    border-radius: 10px;
+   
+}
 
-#rules{
+p {
+    color: rgb(230, 216, 31);
+}
+
+
+
+#question {
+    font-size: 40px;
+    border: 2px solid black;
+   
+}
+
+li{
+    float: left;
+}
+
+#rules {
     font-size: 30px;
     border: 2px solid black;
 
 }
 
 
-.container>div{
-   
+.container>div {
+
     font-weight: 500;
     font-size: 15px;
-    
+
 }
-#answered{
+
+#answered {
     text-align: center;
     font-size: 40px;
     border: 2px solid black;
-    
+  
+
 }
 
-#start{
+#start {
     font-size: 50px;
     margin-bottom: 50px;
     border: 2px solid black;
@@ -45,59 +62,57 @@ body{
 
 
 
-#start-quiz{
-   text-align: center;
-   width: 100%;
+#start-quiz {
+    text-align: center;
+    width: 100%;
 }
 
 
-button{
+button {
     padding: 0;
     margin: 0;
-    font-size: 25px;
-    background-color: #FCBF49;
+    font-size: 30px;
+    background-color: darkgoldenrod;
+   
+   
 }
 
 
-
-
-
-h1{
+h1 {
     font-size: 60px;
     text-decoration: underline;
 }
 
-.choice-text{
-   font-size: 20px;
+.choice-text {
+    font-size: 20px;
 }
 
-#front-text{
+#front-text {
     font-size: 30px;
-  
 }
 
 
-a{
+a {
     text-decoration: none;
     color: black;
-    
+
 }
 
-#landingpage{
+#landingpage {
     text-align: center;
-   
+
 }
 
-.correct{
+.correct {
     background-color: green;
 }
 
-.incorrect{
+.incorrect {
     background-color: red;
 }
 
 
-.user-choice{
+.user-choice {
     width: 100px;
     height: 50px;
     border: 2px solid black;
@@ -105,201 +120,203 @@ a{
     cursor: pointer;
 }
 
-.choice-text{
+.choice-text {
     cursor: pointer;
     font-size: 30px;
     width: 100%;
     height: 100%;
 }
 
-#herobg{
+#herobg {
     width: 800px;
 }
 
-#hero{
+#hero {
     font-size: 40px;
     border: 2px solid black;
     margin: 40px 40px;
     padding: 20px 20px;
 }
 
-#game{
+#game {
     cursor: pointer;
     width: 100%;
     height: 100%;
 }
 
-.container>div{
+.container>div {
     border: 2px solid black;
     border-radius: 4px;
-    box-shadow: 5px 10px black;
+    box-shadow: 5px 10px 10px black;
     color: black;
-    
+
 }
 
-p{
-    color:khaki;
-}
-
-.landingpage>div{
-    border-radius: 10px;
-}
-
-.landingpage{
+/*------------------------------------Grid layout for home page*/
+.landingpage {
     display: grid;
-    grid-template-columns: 30vw 1fr 30vw;
+    grid-template-columns: 3vw 1fr 3vw;
     text-align: center;
     grid-gap: 20px;
-    grid-template-areas: 
-    " . heading"
-    " . video "
-    " . rules "
-    " . start "
+    grid-template-areas:
+        " . heading"
+        " . text"
+        " . rules "
+        " . start "
 
     ;
 }
 
 
-
-.heading{
-    grid-area: heading;
+#text {
+    grid-area: text;
+    border: 2px solid black;
 }
 
-#video{
-   grid-area: video;
-}
-
-#rules{
+#rules {
     grid-area: rules;
 
-    
+
 }
 
-#start{
+#start {
     grid-area: start;
 }
 
-iframe{
-    width: 560px; 
-    height: 315px;
-}
 
-
-.container{
+/*----------------------------------Grid layout for Quiz page*/
+.container {
     display: grid;
     grid-gap: 15px;
     text-align: center;
     grid-template-columns: 3vw 1fr 1fr 3vw;
-    grid-template-areas: 
-    " . heading heading "
-    " . question question "
-    ". answer-a answer-b "
-    '. answer-c answer-d '
-    '. answered-questions answered-questions '
-    
-    ;
-
-    
-}
-
-.heading{
-    grid-area: heading;
-}
-
-#question{
-    grid-area: question;
-}
-
-#answer-b{
-    grid-area: answer-b;
-}
-
-#answer-c{
-    grid-area: answer-c;
-}
-
-#answer-d{
-    grid-area: answer-d;
-}
-
-#answer-a{
-    grid-area: answer-a;
-}
-
-#start-quiz{
-    grid-area: start-quiz;
-}
-
-#answered-questions{
-    grid-area: answered-questions;
-    margin-bottom: 50px;
-}
-
-/*Grid layout for the quiz selection page*/
-.selection{
-    display: grid;
-    grid-template-columns: 3vw 1fr 3vw;
-    grid-template-rows: 200px 100px 100px 100px;
-    grid-gap: 10px;
-    grid-template-areas: 
-    " . hero"  
-    " . manquiz" 
-    " . captain-america-quiz"
-    " . thor-quiz"
-    " . marvel-universe"
-    ;
-}
-
-#marvel-universe{
-    grid-area: marvel-universe;
-}
-
-#manquiz{
-    grid-area: manquiz;
-}
-
-#thor-quiz{
-    grid-area: thor-quiz;
-}
-
-#hero{
-    grid-area: hero;
-}
-
-#captain-america-quiz{
-    grid-area:captain-america-quiz;
-}
-
-
-@media (min-width: 800px) {
-    .selection{
-        display: grid;
-        grid-template-columns: 10vw repeat(2, minmax(40vw, auto)) 10vw;
-        grid-template-rows: 200px 100px 100px 100px;
-        grid-gap: 10px;
-        grid-template-areas: 
-        "  . hero hero"  
-        "  .manquiz captain-america-quiz" 
-        "  .thor-quiz marvel-universe"
+    grid-template-areas:
       
-        ;
-    }
-    .container{
-        display: grid;
-        grid-gap: 15px;
-        text-align: center;
-        grid-template-columns: 20vw 1fr 1fr 20vw;
-        grid-template-areas: 
-        " . heading heading "
         " . question question "
         ". answer-a answer-b "
         '. answer-c answer-d '
         '. answered-questions answered-questions '
-        
-        ;
-    
-        
-    }
+
+    ;
+
 
 }
 
+.heading {
+    grid-area: heading;
+}
+
+#question {
+    grid-area: question;
+}
+
+#answer-b {
+    grid-area: answer-b;
+}
+
+#answer-c {
+    grid-area: answer-c;
+}
+
+#answer-d {
+    grid-area: answer-d;
+}
+
+#answer-a {
+    grid-area: answer-a;
+}
+
+#start-quiz {
+    grid-area: start-quiz;
+}
+
+#answered-questions {
+    grid-area: answered-questions;
+    margin-bottom: 50px;
+}
+
+/*-------------------------------Grid layout for the quiz selection page*/
+.selection {
+    display: grid;
+    grid-template-columns: 3vw 1fr 3vw;
+    grid-template-rows: 200px 100px 100px 100px;
+    grid-gap: 10px;
+    grid-template-areas:
+        
+        " . hero"
+        " . manquiz"
+        " . captain-america-quiz"
+        " . thor-quiz"
+        " . marvel-universe"
+    ;
+}
+
+#marvel-universe {
+    grid-area: marvel-universe;
+}
+
+#manquiz {
+    grid-area: manquiz;
+}
+
+#thor-quiz {
+    grid-area: thor-quiz;
+}
+
+#hero {
+    grid-area: hero;
+}
+
+#captain-america-quiz {
+    grid-area: captain-america-quiz;
+}
+
+
+/*---------------------------------Media Quiries*/
+@media (min-width: 800px) {
+    .selection {
+        display: grid;
+        grid-template-columns: 10vw repeat(2, minmax(40vw, auto)) 10vw;
+        grid-template-rows: 200px 100px 100px 100px;
+        grid-gap: 10px;
+        grid-template-areas:
+        
+            "  . hero hero"
+            "  .manquiz captain-america-quiz"
+            "  .thor-quiz marvel-universe"
+
+        ;
+    }
+
+    .container {
+        display: grid;
+        grid-gap: 15px;
+        text-align: center;
+        grid-template-columns: 20vw 1fr 1fr 20vw;
+        grid-template-areas:
+            
+            " . question question "
+            ". answer-a answer-b "
+            '. answer-c answer-d '
+            '. answered-questions answered-questions '
+
+        ;
+
+
+    }
+
+    .landingpage {
+        display: grid;
+        grid-template-columns: 20vw 1fr 20vw;
+        text-align: center;
+        grid-gap: 20px;
+        grid-template-areas:
+        " . heading"
+        " . text"
+        " . rules "
+        " . start "
+
+        ;
+    }
+
+}
