@@ -6,6 +6,7 @@ body{
   margin: 0;
   padding: 0;
   background-color: #ae2012;
+  color: #FCBF49;
  
 }
 
@@ -49,6 +50,8 @@ ul{
 button{
     padding: 0;
     margin: 0;
+    font-size: 25px;
+    background-color: #FCBF49;
 }
 
 
@@ -66,9 +69,12 @@ h1{
 
 #front-text{
     display: flex;
+   width: 400px;
+   height: 200px;
     font-size: 30px;
-    align-items: center;
-  justify-content: center;
+  
+ 
+  border: 2px solid black;
 
 }
 
@@ -125,7 +131,12 @@ a{
     border: 2px solid black;
     border-radius: 4px;
     box-shadow: 5px 10px black;
+    color: black;
     
+}
+
+p{
+    color:khaki;
 }
 
 .container{
