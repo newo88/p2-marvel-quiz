@@ -27,15 +27,15 @@ document.addEventListener("DOMContentLoaded", function (){
             gameArea.style.display = "grid";
             startQuiz.style.display = "none";
            if(this.getAttribute("data-type") === "ironman"){
-            availableQuesions = [...ironmanQuiz];
+            availableQuestions = [...ironmanQuiz];
             startGame()
           
            }else if (this.getAttribute("data-type") === "thor"){ 
-            availableQuesions = [...americaQuiz];
+            availableQuestions = [...americaQuiz];
            startGame();
           
            } else if (this.getAttribute("data-type") === "captainAmerica"){
-            availableQuesions = [...thorQuiz]; 
+            availableQuestions = [...thorQuiz]; 
             startGame();
             
          } else if (this.getAttribute("data-type") === "universe"){
@@ -59,8 +59,9 @@ document.addEventListener("DOMContentLoaded", function (){
 function startGame() {
       questionCounter = 0;
       score = 0;
-      getNewQuestion();
       checkAnswer();
+      getNewQuestion();
+     
     
 }
 
@@ -88,13 +89,13 @@ function correctAnswers(){
 //  Prints a message to the user when they are finsh the quiz depending on the number of correct answer they got.  
  
 
-if (correct <=8 ){
+if (correct >=8 ){
     document.getElementById("end-message").innerHTML = `Congragulations you are Worthy to possess Thors Hammer`;
-}else if(correct <= 6){
+}else if(correct >= 6){
     document.getElementById("end-message").innerHTML = `Well done you are nearly there try again`;
-}else if(correct <= 4){
+}else if(correct >= 4){
     document.getElementById("end-message").innerHTML = `HMMMMM are you sure your a marvel fan?`;
-}else if(correct <= 2){
+}else if(correct >= 2){
     document.getElementById("end-message").innerHTML = `You need to hit the Comics and freshen up`;
 }
 }
@@ -107,7 +108,7 @@ if (correct <=8 ){
  * to the index page.
  */
 function getNewQuestion() {
-if(availableQuesions.length === 10 || questionCounter >= MAX_QUESTIONS){
+if(availableQuestions.length === 10 || questionCounter >= MAX_QUESTIONS){
     answered.style.display = "block";
     gameArea.style.display = "none";
     setTimeout(() => {
@@ -117,11 +118,11 @@ if(availableQuesions.length === 10 || questionCounter >= MAX_QUESTIONS){
     
 }
     questionCounter++;
-    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
-    currentQuestion = availableQuesions[questionIndex];
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
     
-
+    
     choices.forEach( choice => {
         const number = choice.dataset.number;
         choice.innerText = currentQuestion['choice' + number];
@@ -130,7 +131,7 @@ if(availableQuesions.length === 10 || questionCounter >= MAX_QUESTIONS){
 
     availableQuestions.splice(questionIndex, 1);
  
-}
+};
 
 
 /**
