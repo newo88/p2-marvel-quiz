@@ -11,11 +11,13 @@ let correct = document.getElementById("correct");
 let gameArea = document.getElementById("gamearea")
 let answered = document.getElementById("answered");
 let startQuiz = document.getElementById("start-quiz");
-let timeLeft = document.getElementById("timeleft")
+let timeLeft = document.getElementById("timeleft");
+let timeOut = document.getElementById("timeout");
 let count = 5;
 
 gameArea.style.display = "none";
 answered.style.display = "none";
+timeout.style.display = "none";
 
 document.addEventListener("DOMContentLoaded", function (){
     let buttons = document.getElementsByTagName("button")
@@ -64,7 +66,11 @@ let interval = setInterval(function(){
   count--;
   if (count === -1){
      clearInterval(interval);
+     gameArea.style.display = "none";
+     timeout.style.display = "block";
      setTimeout(() => {
+       
+    
         return window.location.assign("index.html")
         
      }, 5000);
