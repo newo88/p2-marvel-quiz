@@ -5,18 +5,23 @@ body {
     font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to right, #1c64d2, #0097f6, #00bed6, #00db84, #a8eb12);   
+    text-align: center;
+    background-image: url("../images/54674.jpg");
+    background-repeat: no-repeat;
+    background-position:  top;
+    background-attachment: scroll; 
+    background-size: cover;
 }
 
 /*-------------------------Landing Page*/
 .landingpage>div {
     border-radius: 10px;
+    background-color: lemonchiffon;
    
 }
 
-#landingpage {
-    text-align: center;
-
+.heading{
+    background-color: none;
 }
 
 #start {
@@ -55,6 +60,15 @@ a:hover {
 
 
 
+/*.background-image{
+    background-image: url("../images/ironbutton.jpg");
+    background-repeat: no-repeat;
+    background-position:  top;
+    background-attachment: scroll;
+    width: 100%;
+    height: 100%;
+}*/
+
   button:hover {
     border: 10px solid green;
    color: white;
@@ -78,8 +92,11 @@ a:hover {
     border-radius: 4px;
     box-shadow: 5px 10px 10px black;
     color: black;
+    background-color: lemonchiffon;
 
 }
+
+
 
 
 #answered {
@@ -102,6 +119,7 @@ h1 {
     font-size: 60px;
     text-decoration: underline;
 }
+
 
 
 
