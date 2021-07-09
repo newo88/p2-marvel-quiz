@@ -14,7 +14,7 @@ let answered = document.getElementById("answered");
 let startQuiz = document.getElementById("start-quiz");
 let timeLeft = document.getElementById("timeleft");
 let timeOut = document.getElementById("timeout");
-let count = 10;
+let count = 60;
 
 gameArea.style.display = "none";
 answered.style.display = "none";
@@ -174,18 +174,18 @@ choices.forEach(choice =>{
 
 }
 
-//let interval = setInterval(function timer(){
-  //  document.getElementById('timeleft').innerHTML= count;
-    // count--;
-    // if (count === -1){
-     //   clearInterval(interval);
-      //  gameArea.style.display = "none";
-       // timeout.style.display = "block";
-        //setTimeout(() => {
+let interval = setInterval(function timer(){
+    document.getElementById('timeleft').innerHTML= count;
+     count--;
+     if (count === -1){
+        clearInterval(interval);
+        gameArea.style.display = "none";
+        timeout.style.display = "block";
+        setTimeout(() => {
           
        
-          // return window.location.assign("index.html")
+           return window.location.assign("index.html")
            
-       // }, 5000);
-       // }
-  // }, 1000);
+        }, 5000);
+        }
+  }, 1000);

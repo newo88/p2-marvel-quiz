@@ -6,6 +6,10 @@ View the live project here.
 
 The purpose of this site is to give the visitor a fun interactive quiz. This web application would be for anyone but especially any one how is a fan of the Marvel Universe. This is a place they can test there knowledge on some of there favourite characters annd see how much they really know. 
 
+## Strategy
+
+
+
 ## User Experience (UX)
 
 -   ### User stories
@@ -24,6 +28,11 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
 
 
 -  ### Design
+
+     -  #### Responsive
+          - IMAGE HERE!
+
+
     -   #### Colour Scheme
          - The colour scheme I wanted for this was to be bright and cheerful using [Color Space](https://mycolor.space/gradient?ori=to+right&hex=%23FF000F&hex2=%230026FF&sub=1) I was able to generate the background that had good contrast when the user selected an answer and see whether it was correct or incorrect.  
 
@@ -41,7 +50,7 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
 -   Multiple Quizs on differnet characters.
 -   Random question generator so user can take the same quiz more than once to get different questions.
 
-![Test Image 3]()
+
 
 ### Languages Used
 
@@ -53,18 +62,17 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
 
  - Gitpod was used to write the code for this project.
  - Github was used to host the wedsite.
-
-
  - [Balsamiq:](https://balsamiq.com/) This was used to create the wireframes for the project.
    
+## Bugs
 
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - 
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - 
-
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
+-   [jSHint](https://jshint.com/)
 
 -   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
