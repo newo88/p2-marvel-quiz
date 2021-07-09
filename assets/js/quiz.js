@@ -6,7 +6,7 @@ let currentQuestion = {};
 let score = document.getElementById("score");
 let questionCounter = 0;
 let availableQuestions = [];
-let MAX_QUESTIONS = 10;
+let MAX_QUESTIONS = 5;
 let buttons = document.getElementsByClassName("buttons");
 let correct = document.getElementById("correct");
 let gameArea = document.getElementById("gamearea");
@@ -98,6 +98,8 @@ if (correct >=8 ){
     document.getElementById("end-message").innerHTML = `HMMMMM ARE YOU SURE YOUR A MARVEL FAN?`;
 }else if(correct >= 2){
     document.getElementById("end-message").innerHTML = `YOU NEED TO HIT THE COMICS AND FRESHEN UP`;
+}else if(correct >= 0){
+    document.getElementById("end-message").innerHTML = `YOUR NOT A MARVEL FAN!`;
 }
 }
 

@@ -84,7 +84,7 @@ const thorQuiz = [
             choice2: "Helen",
             choice3: "Jane",
             choice4: "June",
-            answer: 3,
+            answer: 1,
         },
 
 
