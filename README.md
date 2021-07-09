@@ -6,40 +6,42 @@ View the live project here.
 
 The purpose of this site is to give the visitor a fun interactive quiz. This web application would be for anyone but especially any one how is a fan of the Marvel Universe. This is a place they can test there knowledge on some of there favourite characters annd see how much they really know. 
 
-
-
-
 ## User Experience (UX)
 
 -   ### User stories
 
     -   #### First Time Visitor Goals
 
-        1. As a First Time Visitor, I want to easily understand the main purpose of the site.
-        2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-        
+        1. Easily navagate around the site.
+        2. I want to play an enjoyable quiz.
+        3. I want to know when I get a questions wrong or right.
+        4. When the quiz is over I would like to know how many I got right and recieve feed back.        
 
--   ### Design
+    -   #### Returning Users
+
+        1. Easily navagate around the site.
+        2. Take the same quiz again and recieve different questions.
+
+
+-  ### Design
     -   #### Colour Scheme
-        -   The three main colours i used are blue black and white. I keep the colour scheme simple as not to take away from the photos of the consoles. Most of the photos have a white background and the console's them selves are mainly black and white in colour. The background colour has a gradient of light blue to dark blue so when the user is scrolling down through the page its not just the same block colour. 
+         - The colour scheme I wanted for this was to be bright and cheerful using [Color Space](https://mycolor.space/gradient?ori=to+right&hex=%23FF000F&hex2=%230026FF&sub=1) I was able to generate the background that had good contrast when the user selected an answer and see whether it was correct or incorrect.  
 
     -   #### Typography
         -   The Roboto font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Roboto is a clean font used frequently in programming, so it is both attractive and appropriate.
     
-   ### Wireframes
+    -    #### Wireframes
 
-- The wireframes for the project can be found here [Wireframe](/workspace/p2-marvel-quiz/assets/wireframes)
-
-
- 
-
+    - The wireframes for the project can be found here [Wireframe](/workspace/p2-marvel-quiz/assets/wireframes)
 
 
 ## Features
 
--   Responsive on all device sizes
+-   Responsive on all device sizes.
+-   Multiple Quizs on differnet characters.
+-   Random question generator so user can take the same quiz more than once to get different questions.
 
-![Test Image 3](assets/images/responsive.PNG)
+![Test Image 3]()
 
 ### Languages Used
 
@@ -49,7 +51,11 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Balsamiq:](https://balsamiq.com/) This was used to create the wireframes for the project.
+ - Gitpod was used to write the code for this project.
+ - Github was used to host the wedsite.
+
+
+ - [Balsamiq:](https://balsamiq.com/) This was used to create the wireframes for the project.
    
 
 ## Testing
@@ -58,38 +64,15 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - 
-### Testing User Stories from User Experience (UX) Section
 
--   #### First Time Visitor Goals
-
--   Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice.
-
--   The user has two options from the home page use the navigation bar at the top of the page or click the logo for the console they want to find out more about.
-
--   When they get to the console page they are looking for they can scroll down and through them or there is a sub menu bar to take them straight to there console of choice.
-
-
-### Testing
 
 -   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
 -   A large amount of testing was done to ensure that all pages were linking correctly.
--   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+-   Friends and family members were asked to review the site and documentation to point out any bugs and/or user     experience issues.
 
 
-
-
-## Development
-
--   Further development of this site would include adding more companys and there consoles.
-
--   Adding a gaming hand held section.
-
--   Include a section for fixs for common know issues.
-
--   Include tear down videos for cleaning and restoring vintage consoles and hand helds.   
-
-### Deployment
+## Deployment
 
 -    The website was deployed to Github pages.
 
@@ -124,26 +107,24 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 ####    To troubleshoot any problems in cloning please go to GitHub pages for more help. [GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository#troubleshooting-cloning-errors)
 
 
+### Credit
 
+-  The background was sourced using [Color Space](https://mycolor.space/gradient?ori=to+bottom&hex=%230C47A0&hex2=%2389B91D&sub=1) 
 
+- Help with quiz timer [W3School](https://www.w3schools.com/js/js_timing.asp)
 
+- James Q Quirks tutorial on building a quiz app with javascript [YOUTUBE](https://www.youtube.com/channel/UC-T8W79DN6PBnzomelvqJYw)
 
-### Code
-
--  The background were sourced using [CSS Gradient](https://cssgradient.io/) 
+- MDN Web Docs as an extra resource to understand functions [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 
 ### Content
 
--   All Console information was sourced using [Wikipedia](https://www.wikipedia.org/)
-
--   All of the videos were sourced from [Youtube](www.youtube.com)
-
-### Media
-
--  Photos were sourced from wedsite's with free lisence file can be found here [IMAGES](https://github.com/newo88/p1console-origin/blob/master/docs/photos_p1.txt.odt)
+-   Question were developed by the owner.
 
 ### Acknowledgements
 
 -   My Mentor Chris for continuous helpful feedback and advice.
+
+-   The good people on Slack and also Steve Fooster and Eddy for the helpful reviews of the project.
 
 

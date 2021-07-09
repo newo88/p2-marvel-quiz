@@ -5,12 +5,10 @@ body {
     font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: coral;
-    color: black;
-
+    background-image: linear-gradient(to right, #1c64d2, #0097f6, #00bed6, #00db84, #a8eb12);   
 }
 
-
+/*-------------------------Landing Page*/
 .landingpage>div {
     border-radius: 10px;
    
@@ -32,19 +30,6 @@ body {
     width: 100%;
 }
 
-
-p {
-    color: rgb(230, 216, 31);
-}
-
-
-
-#question {
-    font-size: 40px;
-    border: 2px solid black;
-   
-}
-
 li{
     float: left;
 }
@@ -55,7 +40,36 @@ li{
 
 }
 
+a:hover {
+    border: 10px solid green;
+   color: white;
+  }
 
+/*---------------------------Quiz Selection Page*/
+  
+#hero {
+    font-size: 40px;
+    border: 2px solid black;
+   
+}
+
+
+
+  button:hover {
+    border: 10px solid green;
+   color: white;
+  }
+
+  button {
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, #0c47a0, #0071be, #0092a5, #00ab67, #89b91d);
+    border-radius: 10px;
+}
+
+/*----------------------------------------------Quiz Page*/
 
 .container>div {
     font-weight: 500;
@@ -76,16 +90,12 @@ li{
 }
 
 
-
-button {
-    padding: 0;
-    margin: 0;
-    font-size: 30px;
-    background-color: darkgoldenrod;
-    cursor: pointer;
-   
+#question {
+    font-size: 40px;
+    border: 2px solid black;
    
 }
+
 
 
 h1 {
@@ -103,19 +113,7 @@ h1 {
 a {
     text-decoration: none;
     color: black;
-
 }
-
-
-
-.correct {
-    background-color: green;
-}
-
-.incorrect {
-    background-color: red;
-}
-
 
 .user-choice {
     width: 100px;
@@ -134,18 +132,21 @@ a {
     height: 100%;
 }
 
-
-#hero {
-    font-size: 40px;
-    border: 2px solid black;
-   
-}
-
 #game {
     cursor: pointer;
     width: 100%;
     height: 100%;
 }
+
+/*------------------------------Style for correct and incorrect answers*/
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
 
 
 /*------------------------------------Grid layout for home page*/
