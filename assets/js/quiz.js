@@ -6,7 +6,7 @@ let currentQuestion = {};
 let score = document.getElementById("score");
 let questionCounter = 0;
 let availableQuestions = [];
-let MAX_QUESTIONS = 5;
+let MAX_QUESTIONS = 6;
 let buttons = document.getElementsByClassName("buttons");
 let correct = document.getElementById("correct");
 let gameArea = document.getElementById("gamearea");
@@ -14,7 +14,7 @@ let answered = document.getElementById("answered");
 let startQuiz = document.getElementById("start-quiz");
 let timeLeft = document.getElementById("timeleft");
 let timeOut = document.getElementById("timeout");
-let count = 5;
+let count = 10;
 
 gameArea.style.display = "none";
 answered.style.display = "none";
@@ -98,9 +98,8 @@ if (correct >=8 ){
     document.getElementById("end-message").innerHTML = `HMMMMM ARE YOU SURE YOUR A MARVEL FAN?`;
 }else if(correct >= 2){
     document.getElementById("end-message").innerHTML = `YOU NEED TO HIT THE COMICS AND FRESHEN UP`;
-}else if(correct >= 0){
-    document.getElementById("end-message").innerHTML = `YOUR NOT A MARVEL FAN!`;
 }
+
 }
 
 
@@ -182,11 +181,12 @@ let interval = setInterval(function timer(){
         gameArea.style.display = "none";
         timeout.style.display = "block";
         answered.style.display = "block";
+   
         setTimeout(() => {
-          
-       
            return window.location.assign("index.html")
            
-        }, 5000);
+        }, 8000);
+        } else if (score === MAX_QUESTIONS) {
+           timeout.style.display="none";
         }
   }, 1000);
