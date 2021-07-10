@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&display=swap');
 
 body {
-
     font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    background-image: url("../images/54674.jpg");
+    background-image: url("../images/backgroundimage.jpg");
     background-repeat: no-repeat;
     background-position:  top;
     background-attachment: scroll; 
@@ -16,8 +15,7 @@ body {
 /*-------------------------Landing Page*/
 .landingpage>div {
     border-radius: 10px;
-    background-color: lemonchiffon;
-   
+    background-color: rgb(255, 250, 205, 0.8); 
 }
 
 .heading{
@@ -47,7 +45,7 @@ li{
 
 a:hover {
     border: 10px solid green;
-   color: white;
+   
   }
 
 /*---------------------------Quiz Selection Page*/
@@ -55,23 +53,12 @@ a:hover {
 #hero {
     font-size: 40px;
     border: 2px solid black;
+    background-color: rgb(255, 250, 204, 0.8)
    
 }
 
-
-
-/*.background-image{
-    background-image: url("../images/ironbutton.jpg");
-    background-repeat: no-repeat;
-    background-position:  top;
-    background-attachment: scroll;
-    width: 100%;
-    height: 100%;
-}*/
-
   button:hover {
-    border: 10px solid green;
-   color: white;
+    border: 10px solid red;
   }
 
   button {
@@ -79,8 +66,8 @@ a:hover {
     margin: 0;
     font-size: 30px;
     cursor: pointer;
-    background-image: linear-gradient(to bottom, #0c47a0, #0071be, #0092a5, #00ab67, #89b91d);
     border-radius: 10px;
+    background-color: rgb(255, 250, 205, 0.8)
 }
 
 /*----------------------------------------------Quiz Page*/
@@ -92,36 +79,41 @@ a:hover {
     border-radius: 4px;
     box-shadow: 5px 10px 10px black;
     color: black;
-    background-color: lemonchiffon;
-
 }
 
+.choice-container{
+    background-color: rgb(255, 250, 205, 0.8);
+    width: 100%;
+    height: 100%;
+}
 
-
+.choice-container:hover {
+    font-weight: bolder;
+  }
 
 #answered {
     text-align: center;
     font-size: 40px;
-    border: 2px solid black;
-  
+    border: 2px solid black; 
+    background-color: rgb(255, 250, 205, 0.8);
 }
 
 
 #question {
     font-size: 40px;
     border: 2px solid black;
-   
+    background-color: lemonchiffon; 
 }
 
+#answered-questions{
+    background-color: rgb(255, 250, 205, 0.8);
+}
 
 
 h1 {
     font-size: 60px;
     text-decoration: underline;
 }
-
-
-
 
 #text {
     font-size: 30px;
@@ -139,8 +131,7 @@ a {
     border: 2px solid black;
     margin: 20px;
     cursor: pointer;
-    width: 100%;
-    height: 100%;
+   
 }
 
 .choice-text {
@@ -154,6 +145,12 @@ a {
     cursor: pointer;
     width: 100%;
     height: 100%;
+}
+
+#timeout{
+    background-color: rgb(255, 250, 205, 0.8);
+    font-size: 40px;
+    text-align: center;
 }
 
 /*------------------------------Style for correct and incorrect answers*/

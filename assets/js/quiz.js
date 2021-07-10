@@ -14,7 +14,7 @@ let answered = document.getElementById("answered");
 let startQuiz = document.getElementById("start-quiz");
 let timeLeft = document.getElementById("timeleft");
 let timeOut = document.getElementById("timeout");
-let count = 60;
+let count = 5;
 
 gameArea.style.display = "none";
 answered.style.display = "none";
@@ -181,6 +181,7 @@ let interval = setInterval(function timer(){
         clearInterval(interval);
         gameArea.style.display = "none";
         timeout.style.display = "block";
+        answered.style.display = "block";
         setTimeout(() => {
           
        
