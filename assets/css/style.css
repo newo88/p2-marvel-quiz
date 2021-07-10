@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&display=swap');
-
+/*https://stackoverflow.com/questions/23017857/make-background-image-100-of-viewport*/
 html,body { height: 100%; min-height: 100%; }
 
 body {

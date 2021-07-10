@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function (){
             startQuiz.style.display = "none";
            if(this.getAttribute("data-type") === "ironman"){
             availableQuestions = [...ironmanQuiz];
+           
             startGame();
           
            }else if (this.getAttribute("data-type") === "thor"){ 
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function (){
  * The start game function. This is called when the user selects their hero.
  */
 
-function startGame() {
+function startGame(_timer) {
       questionCounter = 0;
       score = 0;
       checkAnswer();
@@ -110,7 +111,7 @@ if (correct >=8 ){
  * to the index page.
  */
 function getNewQuestion() {
-if(availableQuestions.length === 10 || questionCounter >= MAX_QUESTIONS){
+if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
     answered.style.display = "block";
     gameArea.style.display = "none";
     setTimeout(() => {
@@ -173,20 +174,24 @@ choices.forEach(choice =>{
 
 }
 
-let interval = setInterval(function timer(){
+let interval = setInterval(function(){
     document.getElementById('timeleft').innerHTML= count;
      count--;
      if (count === -1){
         clearInterval(interval);
         gameArea.style.display = "none";
-        timeout.style.display = "block";
+        timeOut.style.display ="block";
         answered.style.display = "block";
-   
         setTimeout(() => {
-           return window.location.assign("index.html")
-           
-        }, 8000);
-        } else if (score === MAX_QUESTIONS) {
-           timeout.style.display="none";
-        }
+            return window.location.assign("index.html")
+            
+         }, 9000);
+    } else if (questionCounter >= MAX_QUESTIONS + 1){
+        clearInterval(interval);
+       
+    }
+
+      
+        
+        
   }, 1000);
