@@ -54,7 +54,7 @@ const thorQuiz = [
             choice2: "The End!",
             choice3: "Time Crush",
             choice4: "Mjolnir",
-            answer: 4,
+            answer: 1,
         },
 
 
