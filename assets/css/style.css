@@ -285,10 +285,19 @@ a {
 }
 
 
-/*---------------------------------Media Quiries*/
+/*---------------------------------Media Querys*/
 @media (min-width: 800px) {
-    
+
     html,body { height: 100%; min-height: 100%; }
+
+    body {
+      
+        background-size: fixed;
+    }
+    
+    .choice-container:hover {
+        font-weight: normal;
+      }
 
     .selection {
         display: grid;
