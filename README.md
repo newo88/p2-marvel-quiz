@@ -4,11 +4,7 @@
 
 View the live project here.
 
-The purpose of this site is to give the visitor a fun interactive quiz. This web application would be for anyone but especially any one how is a fan of the Marvel Universe. This is a place they can test there knowledge on some of there favourite characters annd see how much they really know. 
-
-## Strategy
-
-
+The purpose of this site is to give the visitor a fun interactive quiz. This web application would be for anyone but especially any one who is a fan of the Marvel Universe. This is a place they can test there knowledge on some of there favourite characters annd see how much they really know. 
 
 ## User Experience (UX)
 
@@ -29,24 +25,45 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
 
 -  ### Design
 
-     -  #### Responsive
-          - IMAGE HERE!
-
-
     -   #### Colour Scheme
-         - The colour scheme I wanted for this was to be bright and cheerful using [Color Space](https://mycolor.space/gradient?ori=to+right&hex=%23FF000F&hex2=%230026FF&sub=1) I was able to generate the background that had good contrast when the user selected an answer and see whether it was correct or incorrect.  
+         - The colour scheme I wanted for this quiz was to be bright and cheerful I achieved this by using a background of the Marvel characters.
+         For the quiz area I gave the quiz selection boxes a light background as the user could tell clearly if they got the answer correct or incorrect and they are also slightly transparent for a better over all look. 
 
     -   #### Typography
         -   The Roboto font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Roboto is a clean font used frequently in programming, so it is both attractive and appropriate.
     
     -    #### Wireframes
 
-    - The wireframes for the project can be found here [Wireframe](/workspace/p2-marvel-quiz/assets/wireframes)
+         - The wireframes for the project can be found here [Wireframe](/workspace/p2-marvel-quiz/assets/wireframes)
 
+-   ### Screenshots of Live Site
+
+-    #### Index Page
+
+![Index](assets/images/indexpage.PNG)
+
+-    #### Quiz Selection
+
+![QuizSelection](assets/images/quizselection.PNG)
+
+-    #### Quiz Play Area
+
+![QuizPlayArea](assets/images/gamearea.PNG)
+
+-    #### Time Out Screen
+
+![TimeOut](assets/images/outoftime.PNG)
+
+-    #### End of Quiz
+
+![Endscreen](assets/images/quizfinished.PNG)
 
 ## Features
 
 -   Responsive on all device sizes.
+
+![Responsive](assets/images/responsive.PNG)
+
 -   Multiple Quizs on differnet characters.
 -   Random question generator so user can take the same quiz more than once to get different questions.
 
@@ -63,7 +80,7 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
  - Gitpod was used to write the code for this project.
  - Github was used to host the wedsite.
  - [Balsamiq:](https://balsamiq.com/) This was used to create the wireframes for the project.
-   
+ - [AmIResponsive:](https://amiresponsive.blogspot.com/) This was used to check how responsive the wedsite was.
 ## Bugs
 
 ## Testing
