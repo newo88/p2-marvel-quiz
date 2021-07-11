@@ -1,7 +1,7 @@
 /*jshint esnext: true */
 const questions = document.getElementById('questions');
 //Array.from() method returns an Array object from any object with a length property or an iterable object.
-const choices = Array.from(document.getElementsByClassName('choice-text')); 
+const choices = Array.from(document.getElementsByClassName('choice-text'));
 let currentQuestion = {};
 let score = document.getElementById("score");
 let questionCounter = 0;
@@ -20,32 +20,32 @@ gameArea.style.display = "none";
 answered.style.display = "none";
 timeout.style.display = "none";
 
-document.addEventListener("DOMContentLoaded", function (){
+document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
-    
-    for (let button of buttons){
-        button.addEventListener("click", function(){
+
+    for (let button of buttons) {
+        button.addEventListener("click", function () {
             gameArea.style.display = "grid";
             startQuiz.style.display = "none";
-           if(this.getAttribute("data-type") === "ironman"){
-            availableQuestions = [...ironmanQuiz];
-           
-            startGame();
-          
-           }else if (this.getAttribute("data-type") === "thor"){ 
-            availableQuestions = [...thorQuiz];
-           startGame();
-          
-           } else if (this.getAttribute("data-type") === "captainAmerica"){
-            availableQuestions = [...americaQuiz]; 
-            startGame();
-            
-         } else if (this.getAttribute("data-type") === "universe"){
-            availableQuestions = [...marvelQuiz]; 
-            startGame();
-            
-         } 
- 
+            if (this.getAttribute("data-type") === "ironman") {
+                availableQuestions = [...ironmanQuiz];
+
+                startGame();
+
+            } else if (this.getAttribute("data-type") === "thor") {
+                availableQuestions = [...thorQuiz];
+                startGame();
+
+            } else if (this.getAttribute("data-type") === "captainAmerica") {
+                availableQuestions = [...americaQuiz];
+                startGame();
+
+            } else if (this.getAttribute("data-type") === "universe") {
+                availableQuestions = [...marvelQuiz];
+                startGame();
+
+            }
+
 
         });
 
@@ -60,33 +60,33 @@ document.addEventListener("DOMContentLoaded", function (){
  */
 
 function startGame() {
-     
-      questionCounter = 0;
-      score = 0;
-      checkAnswer();
-      getNewQuestion();
-      let interval = setInterval(function countDown(){
-        document.getElementById('timeleft').innerHTML= count;
+
+    questionCounter = 0;
+    score = 0;
+    checkAnswer();
+    getNewQuestion();
+    let interval = setInterval(function countDown() {
+        document.getElementById('timeleft').innerHTML = count;
         count--;
-         if (count === -1){
+        if (count === -1) {
             clearInterval(interval);
             gameArea.style.display = "none";
-            timeOut.style.display ="block";
+            timeOut.style.display = "block";
             answered.style.display = "block";
-           setTimeout(() => {
+            setTimeout(() => {
                 return window.location.assign("index.html");
-                
-             }, 5000);
-        } else if (questionCounter >= MAX_QUESTIONS + 1){
-            clearInterval(interval); 
-        }            
-      }, 1000);
+
+            }, 5000);
+        } else if (questionCounter >= MAX_QUESTIONS + 1) {
+            clearInterval(interval);
+        }
+    }, 1000);
 }
 
 /**
  * Increments the number of questions answered by the users.
  */
-function answeredQuestions (){
+function answeredQuestions() {
     let oldScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++oldScore;
 
@@ -94,23 +94,23 @@ function answeredQuestions (){
 /**
  * Increments number of correct answers
  */
-function correctAnswers(){
+function correctAnswers() {
     let correct = parseInt(document.getElementById("correct").innerText);
     document.getElementById("correct").innerText = ++correct;
 
 
-//  Prints a message to the user when they are finsh the quiz depending on the number of correct answer they got.  
- 
+    //  Prints a message to the user when they are finsh the quiz depending on the number of correct answer they got.  
 
-if (correct >=8 ){
-    document.getElementById("end-message").innerHTML = `Congragulations YOUR A TRUE MARVEL FAN`;
-}else if(correct >= 6){
-    document.getElementById("end-message").innerHTML = `WELL DONE YOUR NEARLY THERE TRY AGAIN`;
-}else if(correct >= 4){
-    document.getElementById("end-message").innerHTML = `HMMMMM ARE YOU SURE YOUR A MARVEL FAN?`;
-}else if(correct >= 2){
-    document.getElementById("end-message").innerHTML = `YOU NEED TO HIT THE COMICS AND FRESHEN UP`;
-}
+
+    if (correct >= 8) {
+        document.getElementById("end-message").innerHTML = `Congragulations YOUR A TRUE MARVEL FAN`;
+    } else if (correct >= 6) {
+        document.getElementById("end-message").innerHTML = `WELL DONE YOUR NEARLY THERE TRY AGAIN`;
+    } else if (correct >= 4) {
+        document.getElementById("end-message").innerHTML = `HMMMMM ARE YOU SURE YOUR A MARVEL FAN?`;
+    } else if (correct >= 2) {
+        document.getElementById("end-message").innerHTML = `YOU NEED TO HIT THE COMICS AND FRESHEN UP`;
+    }
 }
 
 /**
@@ -120,20 +120,20 @@ if (correct >=8 ){
  * to the index page.
  */
 function getNewQuestion() {
-if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
-    answered.style.display = "block";
-    gameArea.style.display = "none";
-    setTimeout(() => {
-        return window.location.assign("index.html");
-        
-     }, 5000);   
-}
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        answered.style.display = "block";
+        gameArea.style.display = "none";
+        setTimeout(() => {
+            return window.location.assign("index.html");
+
+        }, 5000);
+    }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
-    
-    choices.forEach( choice => {
+
+    choices.forEach(choice => {
         const number = choice.dataset.number;
         choice.innerText = currentQuestion['choice' + number];
     });
@@ -149,35 +149,31 @@ if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
  * called and adds 1 to answered questions.
  * then a new question is called.
  */
-function checkAnswer(){
-    
-choices.forEach(choice =>{
-    choice.addEventListener( "click", e => {
-    const  selectedChoice = e.target; 
-    const selectedAnswer = selectedChoice.dataset.number;
-    
-    if (selectedAnswer == currentQuestion.answer){
-        correctAnswers();
-    }
+function checkAnswer() {
 
-    answeredQuestions();
-  
-     const classToApply = 
-     selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-     selectedChoice.parentElement.classList.add(classToApply);
-     setTimeout(() => {
-        selectedChoice.parentElement.classList.remove(classToApply);
-        getNewQuestion();
-        
-     }, 1000);
-   
-     
+    choices.forEach(choice => {
+        choice.addEventListener("click", e => {
+            const selectedChoice = e.target;
+            const selectedAnswer = selectedChoice.dataset.number;
+
+            if (selectedAnswer == currentQuestion.answer) {
+                correctAnswers();
+            }
+
+            answeredQuestions();
+
+            const classToApply =
+                selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+            selectedChoice.parentElement.classList.add(classToApply);
+            setTimeout(() => {
+                selectedChoice.parentElement.classList.remove(classToApply);
+                getNewQuestion();
+
+            }, 1000);
+
+
+        });
+
     });
-   
-});
 
 }
-
-
-
-

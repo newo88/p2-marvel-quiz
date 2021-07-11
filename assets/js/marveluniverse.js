@@ -1,55 +1,55 @@
 const marvelQuiz = [
-    
+
     {
-   question: "Whats Tony Starks alter Ego",
-   choice1: "Iron Man",
-   choice2: "Thor",
-   choice3: "Captain America",
-   choice4: "hulk",
-   answer: 1,
+        question: "Whats Tony Starks alter Ego",
+        choice1: "Iron Man",
+        choice2: "Thor",
+        choice3: "Captain America",
+        choice4: "hulk",
+        answer: 1,
     },
 
 
-   {
-       question: "What is the name of the actor who plays Iron Man?",
-       choice1: "Chris Evens",
-       choice2: "Robert Downey Jr",
-       choice3: "Happy Hogan",
-       choice4: "Sandra ",
-       answer: 2,
-   },
-
-   {
-       question: "Who is Iron Man's MCU protegé?",
-       choice1: "Antman",
-       choice2: "Winter Soldier",
-       choice3: "Spiderman",
-       choice4: "Black Widow",
-       answer: 3,
-   },
-
-   {
-       question: "What year did the first Iron Man movie come out?",
-       choice1: "2001",
-       choice2: "2014",
-       choice3: "2010",
-       choice4: "2008",
-       answer: 4,
-   },
-
-
-   {
-    question: "What is the name of Thor's enchanted hammer?",
-    choice1: "Might Hammer",
-    choice2: "Asgaurd",
-    choice3: "Mjolnir",
-    choice4: "Fenris",
-    answer: 3,
-     },
-
- 
     {
-        question: "Who is Thors Father?" ,
+        question: "What is the name of the actor who plays Iron Man?",
+        choice1: "Chris Evens",
+        choice2: "Robert Downey Jr",
+        choice3: "Happy Hogan",
+        choice4: "Sandra ",
+        answer: 2,
+    },
+
+    {
+        question: "Who is Iron Man's MCU protegé?",
+        choice1: "Antman",
+        choice2: "Winter Soldier",
+        choice3: "Spiderman",
+        choice4: "Black Widow",
+        answer: 3,
+    },
+
+    {
+        question: "What year did the first Iron Man movie come out?",
+        choice1: "2001",
+        choice2: "2014",
+        choice3: "2010",
+        choice4: "2008",
+        answer: 4,
+    },
+
+
+    {
+        question: "What is the name of Thor's enchanted hammer?",
+        choice1: "Might Hammer",
+        choice2: "Asgaurd",
+        choice3: "Mjolnir",
+        choice4: "Fenris",
+        answer: 3,
+    },
+
+
+    {
+        question: "Who is Thors Father?",
         choice1: "Odin",
         choice2: "Loki",
         choice3: "Zeus",
@@ -97,7 +97,7 @@ const marvelQuiz = [
 
 
     {
-        question:"Thor also had an axe what was the name of it?",
+        question: "Thor also had an axe what was the name of it?",
         choice1: "Storm Bringer",
         choice2: "War Bringer",
         choice3: "Storm Breaker",
@@ -156,7 +156,7 @@ const marvelQuiz = [
 
 
     {
-        question:"What is Captain America's shield made out of?",
+        question: "What is Captain America's shield made out of?",
         choice1: "Alloy Metal",
         choice2: "Titanium alloy",
         choice3: "Vibranium",
@@ -166,7 +166,7 @@ const marvelQuiz = [
 
 
     {
-        question:"Who is Captain America's best friend?",
+        question: "Who is Captain America's best friend?",
         choice1: "Bucky",
         choice2: "Iron Man",
         choice3: "Thor",
@@ -221,7 +221,7 @@ const marvelQuiz = [
         choice4: "Loki",
         answer: 3,
     },
-    
+
     {
         question: "What was the name of the peacekeeping AI Stark built?",
         choice1: "P.E.A.C.E.",
