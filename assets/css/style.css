@@ -89,10 +89,9 @@ a:hover {
     height: 100%;
 }
 
-.choice-container:hover {
+  .choice-container:hover {
     font-weight: bolder;
   }
-
 #answered {
     text-align: center;
     font-size: 40px;
@@ -264,6 +263,11 @@ a {
     ;
 }
 
+.choice-container:hover {
+    font-weight: normal;
+  }
+
+
 #marvel-universe {
     grid-area: marvel-universe;
 }
@@ -295,9 +299,7 @@ a {
         background-size: fixed;
     }
     
-    .choice-container:hover {
-        font-weight: normal;
-      }
+    
 
     .selection {
         display: grid;

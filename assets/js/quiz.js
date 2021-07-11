@@ -14,7 +14,7 @@ let answered = document.getElementById("answered");
 let startQuiz = document.getElementById("start-quiz");
 let timeLeft = document.getElementById("timeleft");
 let timeOut = document.getElementById("timeout");
-let count = 10;
+let count = 59;
 
 gameArea.style.display = "none";
 answered.style.display = "none";
@@ -56,21 +56,32 @@ document.addEventListener("DOMContentLoaded", function (){
 
 /**
  * The start game function. This is called when the user selects their hero.
+ * Also starts the quiz timer. 
  */
 
-function startGame(_timer) {
+function startGame() {
+     
       questionCounter = 0;
       score = 0;
       checkAnswer();
       getNewQuestion();
-     
-    
+      let interval = setInterval(function countDown(){
+        document.getElementById('timeleft').innerHTML= count;
+        count--;
+         if (count === -1){
+            clearInterval(interval);
+            gameArea.style.display = "none";
+            timeOut.style.display ="block";
+            answered.style.display = "block";
+           setTimeout(() => {
+                return window.location.assign("index.html");
+                
+             }, 5000);
+        } else if (questionCounter >= MAX_QUESTIONS + 1){
+            clearInterval(interval); 
+        }            
+      }, 1000);
 }
-
-
-
-
-
 
 /**
  * Increments the number of questions answered by the users.
@@ -100,9 +111,7 @@ if (correct >=8 ){
 }else if(correct >= 2){
     document.getElementById("end-message").innerHTML = `YOU NEED TO HIT THE COMICS AND FRESHEN UP`;
 }
-
 }
-
 
 /**
  * Generates a new Question for the user at random.
@@ -117,23 +126,18 @@ if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
     setTimeout(() => {
         return window.location.assign("index.html");
         
-     }, 5000);
-    
+     }, 5000);   
 }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
     
-    
     choices.forEach( choice => {
         const number = choice.dataset.number;
         choice.innerText = currentQuestion['choice' + number];
     });
-
-
     availableQuestions.splice(questionIndex, 1);
- 
 }
 
 
@@ -174,24 +178,6 @@ choices.forEach(choice =>{
 
 }
 
-let interval = setInterval(function(){
-    document.getElementById('timeleft').innerHTML= count;
-     count--;
-     if (count === -1){
-        clearInterval(interval);
-        gameArea.style.display = "none";
-        timeOut.style.display ="block";
-        answered.style.display = "block";
-        setTimeout(() => {
-            return window.location.assign("index.html")
-            
-         }, 9000);
-    } else if (questionCounter >= MAX_QUESTIONS + 1){
-        clearInterval(interval);
-       
-    }
 
-      
-        
-        
-  }, 1000);
+
+
