@@ -65,7 +65,10 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
 ![Responsive](assets/images/responsive.PNG)
 
 -   Multiple Quizs on differnet characters.
--   Random question generator so user can take the same quiz more than once to get different questions.
+-   Random question generator so the user can take the same quiz more than once to get different questions.
+-   Timer visible to the user at the bottom of the quiz page to add more of a challenge to the quiz. 
+-   An tracking system to let the user know how many questions they answered. 
+-   Feed back at the end of the quiz to let the user know how they done.
 
 
 
@@ -78,9 +81,14 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
 ### Frameworks, Libraries & Programs Used
 
  - Gitpod was used to write the code for this project.
- - Github was used to host the wedsite.
+ - Github was used to host the website.
+ - [GoogleFonts](https://fonts.google.com/) Used for the fonts.
  - [Balsamiq:](https://balsamiq.com/) This was used to create the wireframes for the project.
  - [AmIResponsive:](https://amiresponsive.blogspot.com/) This was used to check how responsive the wedsite was.
+ - [jSHint](https://jshint.com/)Used to Validate Javascript. 
+ - [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) Used to validate the CSS.
+ - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)  Used to Validate the HTML.
+
 ## Bugs
 
 ## Testing
@@ -95,6 +103,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
 -   A large amount of testing was done to ensure that all pages were linking correctly.
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user     experience issues.
+
 
 
 ## Deployment
@@ -134,8 +143,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Credit
 
--  The background was sourced using [Color Space](https://mycolor.space/gradient?ori=to+bottom&hex=%230C47A0&hex2=%2389B91D&sub=1) 
-
 - Help with quiz timer [W3School](https://www.w3schools.com/js/js_timing.asp)
 
 - James Q Quirks tutorial on building a quiz app with javascript [YOUTUBE](https://www.youtube.com/channel/UC-T8W79DN6PBnzomelvqJYw)
@@ -145,6 +152,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 ### Content
 
 -   Question were developed by the owner.
+
+-   Background image was sourced from [4KMarvelWallpapers](https://wallpaperaccess.com/4k-marvel)
+
+-   Code for image taking 100% view port [StackOverflow](https://stackoverflow.com/questions/23017857/make-background-image-100-of-viewport)
 
 ### Acknowledgements
 
