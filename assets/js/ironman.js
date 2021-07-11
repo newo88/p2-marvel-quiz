@@ -135,14 +135,6 @@
                 answer: 4,
             },
 
-            {
-                question: "How did Tony's parents supposable die?",
-                choice1: "Plane Crash",
-                choice2: "Sailing",
-                choice3: "Car Crash",
-                choice4: "Storm",
-                answer: 3,
-            },
 
             {
                 question: "What job does Happy Hogan do for Tony?",
