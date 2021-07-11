@@ -20,16 +20,16 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
 
     -   #### First Time Visitor Goals
 
-        1. Easily navagate around the site.
-        2. I want to play an enjoyable quiz.
-        3. I want to know when I get a questions wrong or right.
-        4. When the quiz is over I would like to know how many I got right and recieve feed back.
-        5. I want to be able to play on different devices.        
+        - Easily navagate around the site.
+        - I want to play an enjoyable quiz.
+        - I want to know when I get a questions wrong or right.
+        - When the quiz is over I would like to know how many I got right and recieve feed back.
+        - I want to be able to play on different devices.        
 
     -   #### Returning Users
 
-        1. Easily navagate around the site.
-        2. Take the same quiz again and recieve different questions.
+        - Easily navagate around the site.
+        - Take the same quiz again and recieve different questions.
 
 
 -  ### Design
@@ -81,13 +81,13 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
 
 
 
-### Languages Used
+## Languages Used
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript)
 
-### Frameworks, Libraries & Programs Used
+## Frameworks, Libraries & Programs Used
 
  - Gitpod was used to write the code for this project.
  - Github was used to host the website.
@@ -98,7 +98,32 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
  - [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) Used to validate the CSS.
  - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)  Used to Validate the HTML.
 
-## Bugs
+## Bugs Known Issues
+   
+ - Issue
+   * When a user was taking the quiz the same question would get asked a number of times.
+ - Fix
+   * In the Javascript code there was a spelling mistake on line 140 which was causing it to not splice out the question when asked.
+
+ - Issue
+    * On Chrome Developer Tools the console is logging an error on line 19 of the Javascript code error is Uncaught TypeError: Cannot read property   'style' of null at quiz.js:19. 
+
+ -  Fix
+    * This error goes away when the user clicks on the start quiz button. The reason for this error is becuase it does not exist until the user
+    goes onto quiz.html. A solution for this still has to be found.
+
+ -  Issue 
+    * When a user selected the start quiz button and was taken to the quiz selection page the timer would start. If the user didnt select anything the time out message was displaying even do they didnt start the quiz. 
+
+-   Fix
+    * Setting the timer function inside of the start game function meant the timer wouldnt start unless the user click on one of the quizs. 
+
+
+-   Issue
+    * When validating the javascript there was a number of semicolon's missing and also a number of warnings saying 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).     
+
+-    Fix
+     * Using the log on jShint i added the semicolon's that were missing and also after a google search found that adding /*jshint esnext: true */ to the top of my javascript file would take the warnings away.       
 
 
 
