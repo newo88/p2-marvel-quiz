@@ -8,6 +8,14 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
 
 ## User Experience (UX)
 
+### **Site owners Goals**
+
+* To have an appealing website for users that they want to come back
+* For the users to have fun while playing 
+* For the users to learn something new while playing 
+* Learn a new Programming language while developing this site.
+
+
 -   ### User stories
 
     -   #### First Time Visitor Goals
@@ -15,7 +23,8 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
         1. Easily navagate around the site.
         2. I want to play an enjoyable quiz.
         3. I want to know when I get a questions wrong or right.
-        4. When the quiz is over I would like to know how many I got right and recieve feed back.        
+        4. When the quiz is over I would like to know how many I got right and recieve feed back.
+        5. I want to be able to play on different devices.        
 
     -   #### Returning Users
 
@@ -62,12 +71,12 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
 
 -   Responsive on all device sizes.
 
-![Responsive](assets/images/responsive.PNG)
+![Responsive](assets/testingimages/responsive.PNG)
 
 -   Multiple Quizs on differnet characters.
 -   Random question generator so the user can take the same quiz more than once to get different questions.
 -   Timer visible to the user at the bottom of the quiz page to add more of a challenge to the quiz. 
--   An tracking system to let the user know how many questions they answered. 
+-   A tracking system to let the user know how many questions they answered. 
 -   Feed back at the end of the quiz to let the user know how they done.
 
 
@@ -91,13 +100,21 @@ The purpose of this site is to give the visitor a fun interactive quiz. This web
 
 ## Bugs
 
+
+
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+This Website was tested with W3C Markup Validator, W3C CSS Validator and jShint with no errors shown.
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
+- Index Page
+       ![indexhtml](assets/testingimages/indexhtml.PNG)
+- Quiz Page
+       ![QuizHtml](assets/testingimages/quizhtml.PNG)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+       ![CssValidated](assets/testingimages/cssvalidated.PNG) 
 -   [jSHint](https://jshint.com/)
+        ![Javascript](assets/testingimages/javascript.PNG)
 
 -   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
