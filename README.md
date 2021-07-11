@@ -1,18 +1,19 @@
-# Owen McGill_5P
+# Marvel Quiz
 
 ## Full-Stack Development Course | Portfolio Project 2
 
-View the live project here.
+View the live project here.[MarvelQuiz](https://newo88.github.io/p2-marvel-quiz/index.html)
 
-The purpose of this site is to give the visitor a fun interactive quiz. This web application would be for anyone but especially any one who is a fan of the Marvel Universe. This is a place they can test there knowledge on some of there favourite characters annd see how much they really know. 
+The purpose of this site is to give the visitor a fun interactive quiz. This web application would be for anyone but especially any one who is a fan of the Marvel Universe. This is a place they can test there knowledge on some of there favourite characters and see how much they really know. 
 
 ## User Experience (UX)
 
-### **Site owners Goals**
+### Site owners Goals
 
-* To have an appealing website for users that they want to come back
-* For the users to have fun while playing 
-* For the users to learn something new while playing 
+* To have an appealing website for users that they want to come back.
+* To provide users a challenging quiz they will enjoy.
+* For the users to have fun while playing. 
+* For the users to learn something new while playing. 
 * Learn a new Programming language while developing this site.
 
 

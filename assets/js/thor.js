@@ -64,7 +64,7 @@ const thorQuiz = [
             choice2: "War Bringer",
             choice3: "Storm Breaker",
             choice4: "Mighty Axe",
-            answer: 2,
+            answer: 3,
         },
 
 
