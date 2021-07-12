@@ -63,7 +63,7 @@
          choice1: "Iron Man",
          choice2: "Robert Downey Jr",
          choice3: "Captain America",
-         choice4: "hulk",
+         choice4: "Hulk",
          answer: 2,
      },
 
@@ -142,7 +142,7 @@
          choice2: "SideKick",
          choice3: "Body Gaurd",
          choice4: "Chauffeur",
-         answer: 4,
+         answer: 3,
      },
 
      {
