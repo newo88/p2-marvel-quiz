@@ -189,4 +189,4 @@ const americaQuiz = [
         answer: 4,
     },
 
-]
+];

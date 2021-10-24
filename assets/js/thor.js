@@ -190,4 +190,4 @@ const thorQuiz = [
         answer: 4,
     },
 
-]  
+];
